@@ -9,6 +9,7 @@ function App() {
         <h1>
           Ms. Hillary Vance
         </h1>
+        // TODO: Update font to https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi6g8X4p9OMAxU3IjQIHVoOLxgQFnoECBYQAQ&url=https%3A%2F%2Fwww.dafontfree.co%2Fbaltiholm-font%2F&usg=AOvVaw1gVsOGxUM61lBr33uU4MC1&opi=89978449
         <h2>
           About me
         </h2>
