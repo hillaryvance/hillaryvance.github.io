@@ -41,6 +41,12 @@ h2 {
   margin-bottom: 0.25rem;
 }
 
+div {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
 .About-me {
   margin-top: 0;
   max-width: 75%;
