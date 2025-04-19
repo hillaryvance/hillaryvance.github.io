@@ -130,7 +130,7 @@
 
   // Only insert newRequire.load when it is actually used.
   // The code in this file is linted against ES5, so dynamic import is not allowed.
-  // INSERT_LOAD_HERE
+  function $parcel$resolve(url) {  url = importMap[url] || url;  return import.meta.resolve(distDir + url);}newRequire.resolve = $parcel$resolve;
 
   Object.defineProperty(newRequire, 'root', {
     get: function () {
@@ -16119,119 +16119,182 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _appCss = require("./App.css");
-var _reactPdf = require("react-pdf");
+var _pdfFile = require("./components/pdf-file");
+var _menuBarCss = require("./MenuBar.css");
 var _s = $RefreshSig$();
-(0, _reactPdf.pdfjs).GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${(0, _reactPdf.pdfjs).version}/build/pdf.worker.min.mjs`;
-const options = {
-    cMapUrl: `https://unpkg.com/pdfjs-dist@${(0, _reactPdf.pdfjs).version}/cmaps/`,
-    standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${(0, _reactPdf.pdfjs).version}/standard_fonts/`
-};
-function MyApp() {
+const MenuBar = ({ items })=>{
     _s();
-    const [numPages, setNumPages] = (0, _react.useState)();
-    const [pageNumber, setPageNumber] = (0, _react.useState)(1);
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-    }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactPdf.Document), {
-                file: "",
-                onLoadSuccess: onDocumentLoadSuccess,
-                options: options,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactPdf.Page), {
-                    pageNumber: pageNumber
-                }, void 0, false, {
+    const [activeItem, setActiveItem] = (0, _react.useState)(null);
+    const handleItemClick = (item)=>{
+        setActiveItem(item);
+        // Scroll to section
+        const section = document.getElementById(item);
+        if (section) section.scrollIntoView({
+            behavior: 'smooth'
+        });
+        // Remove underline after 1 second
+        setTimeout(()=>{
+            setActiveItem(null);
+        }, 1000);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            style: {
+                listStyle: 'none',
+                padding: 0,
+                display: 'flex'
+            },
+            children: items.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "menu-item",
+                    style: {
+                        marginRight: '20px',
+                        cursor: 'pointer',
+                        position: 'relative'
+                    },
+                    onClick: ()=>handleItemClick(item),
+                    children: [
+                        item,
+                        activeItem === item && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            style: {
+                                position: 'absolute',
+                                bottom: '-5px',
+                                left: 0,
+                                width: '100%',
+                                height: '2px',
+                                backgroundColor: 'black'
+                            }
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 41,
+                            columnNumber: 15
+                        }, undefined)
+                    ]
+                }, item, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 23,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "src/App.tsx",
-                lineNumber: 22,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: [
-                    "Page ",
-                    pageNumber,
-                    " of ",
-                    numPages
-                ]
-            }, void 0, true, {
-                fileName: "src/App.tsx",
-                lineNumber: 25,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                    lineNumber: 29,
+                    columnNumber: 11
+                }, undefined))
+        }, void 0, false, {
+            fileName: "src/App.tsx",
+            lineNumber: 27,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 21,
+        lineNumber: 26,
         columnNumber: 5
-    }, this);
-}
-_s(MyApp, "gk3reyvzCRgX/TjORsZZAkDBClA=");
-_c = MyApp;
+    }, undefined);
+};
+_s(MenuBar, "H3LDoM5AMpB5rVRk/DvD0lw2QVc=");
+_c = MenuBar;
 function App() {
+    const menuItems = [
+        'Home',
+        'Resume',
+        'Recommendations'
+    ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "App",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
             className: "App-header",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: "Ms. Hillary Vance"
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MenuBar, {
+                    items: menuItems
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 36,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    children: "Hello"
-                }, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "Home",
+                    className: "Home",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: "Ms. Hillary Vance"
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 68,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            children: "Hello!"
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 71,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "About-me",
+                            children: "I am proud to be on this journey as an educator with deep roots in the Snoqualmie Valley. I was born and raised in the beautiful Snoqualmie Valley, attending Fall City Elementary and later graduating from Mount Si High School in 2009. My passion for understanding people led me to Central Washington University, where I earned my bachelor's degree in Psychology."
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 74,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "About-me",
+                            children: "My love for teaching led me to pursue my Master's in Elementary Education from Western Governors University."
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 77,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "About-me",
+                            children: "As part of my journey, I completed my student teaching in the Lake Washington School District, where I gained invaluable hands-on experience working with students and fostering a positive learning environment. That experience reinforced my belief in creating engaging, supportive, and inclusive classrooms where every student can thrive."
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 80,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "About-me",
+                            children: "I'm so excited to continue growing as an educator and making a meaningful impact in the lives of my students!"
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 83,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 39,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "About-me",
-                    children: "I am proud to be on this journey as an educator with deep roots in the Snoqualmie Valley. I was born and raised in the beautiful Snoqualmie Valley, attending Fall City Elementary and later graduating from Mount Si High School in 2009. My passion for understanding people led me to Central Washington University, where I earned my bachelor's degree in Psychology."
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pdfFile.PdfFile), {
+                    id: "Resume",
+                    title: "Resume",
+                    fileUrl: new URL(require("623472302cfd7db3"))
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 42,
+                    lineNumber: 87,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "About-me",
-                    children: "My love for teaching led me to pursue my Master's in Elementary Education from Western Governors University. As part of my journey, I completed my student teaching in the Lake Washington School District, where I gained invaluable hands-on experience working with students and fostering a positive learning environment. That experience reinforced my belief in creating engaging, supportive, and inclusive classrooms where every student can thrive."
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pdfFile.PdfFile), {
+                    id: "Recommendations",
+                    title: "Recommendations",
+                    fileUrl: new URL(require("c243ceeeff5894af"))
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 45,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "About-me",
-                    children: "I'm so excited to continue growing as an educator and making a meaningful impact in the lives of my students!"
-                }, void 0, false, {
-                    fileName: "src/App.tsx",
-                    lineNumber: 48,
+                    lineNumber: 88,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 35,
+            lineNumber: 65,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 34,
+        lineNumber: 64,
         columnNumber: 5
     }, this);
 }
 _c1 = App;
 exports.default = App;
 var _c, _c1;
-$RefreshReg$(_c, "MyApp");
+$RefreshReg$(_c, "MenuBar");
 $RefreshReg$(_c1, "App");
 
   $parcel$ReactRefreshHelpers$161e.postlude(module);
@@ -16239,7 +16302,7 @@ $RefreshReg$(_c1, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./App.css":"6n0o6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-pdf":"fNHzC","react":"jMk1U"}],"6n0o6":[function() {},{}],"jnFvT":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./App.css":"6n0o6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U","./components/pdf-file":"kOVd8","623472302cfd7db3":"7dRKv","c243ceeeff5894af":"gCHbN","./MenuBar.css":"2Q6wF"}],"6n0o6":[function() {},{}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -18790,7 +18853,225 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fNHzC":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kOVd8":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PdfFile", ()=>(0, _pdfFile.PdfFile));
+var _pdfFile = require("./pdf-file");
+
+},{"./pdf-file":"kLPwG","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kLPwG":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9ce0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9ce0.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9ce0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PdfFile", ()=>PdfFile);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactHooks = require("@wojtekmaj/react-hooks");
+var _reactPdf = require("react-pdf");
+var _annotationLayerCss = require("react-pdf/dist/esm/Page/AnnotationLayer.css");
+var _textLayerCss = require("react-pdf/dist/esm/Page/TextLayer.css");
+var _pdfFileCss = require("./pdf-file.css");
+var _s = $RefreshSig$();
+(0, _reactPdf.pdfjs).GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${(0, _reactPdf.pdfjs).version}/build/pdf.worker.min.mjs`;
+const options = {
+    cMapUrl: `https://unpkg.com/pdfjs-dist@${(0, _reactPdf.pdfjs).version}/cmaps/`,
+    standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${(0, _reactPdf.pdfjs).version}/standard_fonts/`
+};
+const resizeObserverOptions = {};
+const maxWidth = 800;
+const PdfFile = ({ id, fileUrl, title })=>{
+    _s();
+    const [file] = (0, _react.useState)(fileUrl.toString());
+    const [numPages, setNumPages] = (0, _react.useState)();
+    const [containerRef, setContainerRef] = (0, _react.useState)(null);
+    const [containerWidth, setContainerWidth] = (0, _react.useState)();
+    const onResize = (0, _react.useCallback)((entries)=>{
+        const [entry] = entries;
+        if (entry) setContainerWidth(entry.contentRect.width);
+    }, []);
+    (0, _reactHooks.useResizeObserver)(containerRef, resizeObserverOptions, onResize);
+    function onDocumentLoadSuccess({ numPages: nextNumPages }) {
+        setNumPages(nextNumPages);
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: id,
+        className: "Example",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: title
+                }, void 0, false, {
+                    fileName: "src/components/pdf-file/pdf-file.tsx",
+                    lineNumber: 51,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/pdf-file/pdf-file.tsx",
+                lineNumber: 50,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "Example__container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "Example__container__document",
+                    ref: setContainerRef,
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactPdf.Document), {
+                        file: file,
+                        onLoadSuccess: onDocumentLoadSuccess,
+                        options: options,
+                        children: Array.from(new Array(numPages), (_el, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactPdf.Page), {
+                                pageNumber: index + 1,
+                                width: containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth
+                            }, `page_${index + 1}`, false, {
+                                fileName: "src/components/pdf-file/pdf-file.tsx",
+                                lineNumber: 57,
+                                columnNumber: 29
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/pdf-file/pdf-file.tsx",
+                        lineNumber: 55,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/pdf-file/pdf-file.tsx",
+                    lineNumber: 54,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/pdf-file/pdf-file.tsx",
+                lineNumber: 53,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/pdf-file/pdf-file.tsx",
+        lineNumber: 49,
+        columnNumber: 9
+    }, undefined);
+};
+_s(PdfFile, "ZRTJ0U88mBVZ+BQjQi6FLl98/2U=", false, function() {
+    return [
+        (0, _reactHooks.useResizeObserver)
+    ];
+});
+_c = PdfFile;
+var _c;
+$RefreshReg$(_c, "PdfFile");
+
+  $parcel$ReactRefreshHelpers$9ce0.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@wojtekmaj/react-hooks":"9TFkt","react-pdf":"fNHzC","react-pdf/dist/esm/Page/AnnotationLayer.css":"8ldFV","react-pdf/dist/esm/Page/TextLayer.css":"15zEP","./pdf-file.css":"dm34P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"9TFkt":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useCurrentPosition", ()=>(0, _useCurrentPositionJsDefault.default));
+parcelHelpers.export(exports, "useDebouncedEffect", ()=>(0, _useDebouncedEffectJsDefault.default));
+parcelHelpers.export(exports, "useDebouncedState", ()=>(0, _useDebouncedStateJsDefault.default));
+parcelHelpers.export(exports, "useDebouncedValue", ()=>(0, _useDebouncedValueJsDefault.default));
+parcelHelpers.export(exports, "useEventListener", ()=>(0, _useEventListenerJsDefault.default));
+parcelHelpers.export(exports, "useIntersectionObserver", ()=>(0, _useIntersectionObserverJsDefault.default));
+parcelHelpers.export(exports, "useLocalStorage", ()=>(0, _useLocalStorageJsDefault.default));
+parcelHelpers.export(exports, "useMatchMedia", ()=>(0, _useMatchMediaJsDefault.default));
+parcelHelpers.export(exports, "useMutationObserver", ()=>(0, _useMutationObserverJsDefault.default));
+parcelHelpers.export(exports, "useOnLine", ()=>(0, _useOnLineJsDefault.default));
+parcelHelpers.export(exports, "usePermissionState", ()=>(0, _usePermissionStateJsDefault.default));
+parcelHelpers.export(exports, "usePrefersColorSchemeDark", ()=>(0, _usePrefersColorSchemeDarkJsDefault.default));
+parcelHelpers.export(exports, "usePrefersColorSchemeLight", ()=>(0, _usePrefersColorSchemeLightJsDefault.default));
+parcelHelpers.export(exports, "usePrefersReducedMotion", ()=>(0, _usePrefersReducedMotionJsDefault.default));
+parcelHelpers.export(exports, "usePrefersReducedTransparency", ()=>(0, _usePrefersReducedTransparencyJsDefault.default));
+parcelHelpers.export(exports, "useResizeObserver", ()=>(0, _useResizeObserverJsDefault.default));
+parcelHelpers.export(exports, "useScrollLeft", ()=>(0, _useScrollLeftJsDefault.default));
+parcelHelpers.export(exports, "useScrollLeftPercent", ()=>(0, _useScrollLeftPercentJsDefault.default));
+parcelHelpers.export(exports, "useScrollTop", ()=>(0, _useScrollTopJsDefault.default));
+parcelHelpers.export(exports, "useScrollTopPercent", ()=>(0, _useScrollTopPercentJsDefault.default));
+parcelHelpers.export(exports, "useSetInterval", ()=>(0, _useSetIntervalJsDefault.default));
+parcelHelpers.export(exports, "useSetTimeout", ()=>(0, _useSetTimeoutJsDefault.default));
+parcelHelpers.export(exports, "useTick", ()=>(0, _useTickJsDefault.default));
+parcelHelpers.export(exports, "useToggle", ()=>(0, _useToggleJsDefault.default));
+parcelHelpers.export(exports, "useWindowHeight", ()=>(0, _useWindowHeightJsDefault.default));
+parcelHelpers.export(exports, "useWindowWidth", ()=>(0, _useWindowWidthJsDefault.default));
+var _useCurrentPositionJs = require("./useCurrentPosition.js");
+var _useCurrentPositionJsDefault = parcelHelpers.interopDefault(_useCurrentPositionJs);
+var _useDebouncedEffectJs = require("./useDebouncedEffect.js");
+var _useDebouncedEffectJsDefault = parcelHelpers.interopDefault(_useDebouncedEffectJs);
+var _useDebouncedStateJs = require("./useDebouncedState.js");
+var _useDebouncedStateJsDefault = parcelHelpers.interopDefault(_useDebouncedStateJs);
+var _useDebouncedValueJs = require("./useDebouncedValue.js");
+var _useDebouncedValueJsDefault = parcelHelpers.interopDefault(_useDebouncedValueJs);
+var _useEventListenerJs = require("./useEventListener.js");
+var _useEventListenerJsDefault = parcelHelpers.interopDefault(_useEventListenerJs);
+var _useIntersectionObserverJs = require("./useIntersectionObserver.js");
+var _useIntersectionObserverJsDefault = parcelHelpers.interopDefault(_useIntersectionObserverJs);
+var _useLocalStorageJs = require("./useLocalStorage.js");
+var _useLocalStorageJsDefault = parcelHelpers.interopDefault(_useLocalStorageJs);
+var _useMatchMediaJs = require("./useMatchMedia.js");
+var _useMatchMediaJsDefault = parcelHelpers.interopDefault(_useMatchMediaJs);
+var _useMutationObserverJs = require("./useMutationObserver.js");
+var _useMutationObserverJsDefault = parcelHelpers.interopDefault(_useMutationObserverJs);
+var _useOnLineJs = require("./useOnLine.js");
+var _useOnLineJsDefault = parcelHelpers.interopDefault(_useOnLineJs);
+var _usePermissionStateJs = require("./usePermissionState.js");
+var _usePermissionStateJsDefault = parcelHelpers.interopDefault(_usePermissionStateJs);
+var _usePrefersColorSchemeDarkJs = require("./usePrefersColorSchemeDark.js");
+var _usePrefersColorSchemeDarkJsDefault = parcelHelpers.interopDefault(_usePrefersColorSchemeDarkJs);
+var _usePrefersColorSchemeLightJs = require("./usePrefersColorSchemeLight.js");
+var _usePrefersColorSchemeLightJsDefault = parcelHelpers.interopDefault(_usePrefersColorSchemeLightJs);
+var _usePrefersReducedMotionJs = require("./usePrefersReducedMotion.js");
+var _usePrefersReducedMotionJsDefault = parcelHelpers.interopDefault(_usePrefersReducedMotionJs);
+var _usePrefersReducedTransparencyJs = require("./usePrefersReducedTransparency.js");
+var _usePrefersReducedTransparencyJsDefault = parcelHelpers.interopDefault(_usePrefersReducedTransparencyJs);
+var _useResizeObserverJs = require("./useResizeObserver.js");
+var _useResizeObserverJsDefault = parcelHelpers.interopDefault(_useResizeObserverJs);
+var _useScrollLeftJs = require("./useScrollLeft.js");
+var _useScrollLeftJsDefault = parcelHelpers.interopDefault(_useScrollLeftJs);
+var _useScrollLeftPercentJs = require("./useScrollLeftPercent.js");
+var _useScrollLeftPercentJsDefault = parcelHelpers.interopDefault(_useScrollLeftPercentJs);
+var _useScrollTopJs = require("./useScrollTop.js");
+var _useScrollTopJsDefault = parcelHelpers.interopDefault(_useScrollTopJs);
+var _useScrollTopPercentJs = require("./useScrollTopPercent.js");
+var _useScrollTopPercentJsDefault = parcelHelpers.interopDefault(_useScrollTopPercentJs);
+var _useSetIntervalJs = require("./useSetInterval.js");
+var _useSetIntervalJsDefault = parcelHelpers.interopDefault(_useSetIntervalJs);
+var _useSetTimeoutJs = require("./useSetTimeout.js");
+var _useSetTimeoutJsDefault = parcelHelpers.interopDefault(_useSetTimeoutJs);
+var _useTickJs = require("./useTick.js");
+var _useTickJsDefault = parcelHelpers.interopDefault(_useTickJs);
+var _useToggleJs = require("./useToggle.js");
+var _useToggleJsDefault = parcelHelpers.interopDefault(_useToggleJs);
+var _useWindowHeightJs = require("./useWindowHeight.js");
+var _useWindowHeightJsDefault = parcelHelpers.interopDefault(_useWindowHeightJs);
+var _useWindowWidthJs = require("./useWindowWidth.js");
+var _useWindowWidthJsDefault = parcelHelpers.interopDefault(_useWindowWidthJs);
+
+},{"./useCurrentPosition.js":false,"./useDebouncedEffect.js":false,"./useDebouncedState.js":false,"./useDebouncedValue.js":false,"./useEventListener.js":false,"./useIntersectionObserver.js":false,"./useLocalStorage.js":false,"./useMatchMedia.js":false,"./useMutationObserver.js":false,"./useOnLine.js":false,"./usePermissionState.js":false,"./usePrefersColorSchemeDark.js":false,"./usePrefersColorSchemeLight.js":false,"./usePrefersReducedMotion.js":false,"./usePrefersReducedTransparency.js":false,"./useResizeObserver.js":"64mR8","./useScrollLeft.js":false,"./useScrollLeftPercent.js":false,"./useScrollTop.js":false,"./useScrollTopPercent.js":false,"./useSetInterval.js":false,"./useSetTimeout.js":false,"./useTick.js":false,"./useToggle.js":false,"./useWindowHeight.js":false,"./useWindowWidth.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"64mR8":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>useResizeObserver);
+var _react = require("react");
+function useResizeObserver(element, options, observerCallback) {
+    (0, _react.useEffect)(()=>{
+        if (!element || !('ResizeObserver' in window)) return undefined;
+        const observer = new ResizeObserver(observerCallback);
+        observer.observe(element, options);
+        return ()=>{
+            observer.disconnect();
+        };
+    }, [
+        element,
+        options,
+        observerCallback
+    ]);
+}
+
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fNHzC":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "pdfjs", ()=>_pdfjsDist);
@@ -41302,7 +41583,13 @@ function useDocumentContext() {
     return (0, _react.useContext)((0, _documentContextJsDefault.default));
 }
 
-},{"react":"jMk1U","../../DocumentContext.js":"l2O16","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kVUjx":[function(require,module,exports,__globalThis) {
+},{"react":"jMk1U","../../DocumentContext.js":"l2O16","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8ldFV":[function() {},{}],"15zEP":[function() {},{}],"dm34P":[function() {},{}],"7dRKv":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("RESUME.08dc09ce.pdf") + "?" + Date.now();
+
+},{}],"gCHbN":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("Hillary Vance Recommendation Letter.9627a0f9.pdf") + "?" + Date.now();
+
+},{}],"2Q6wF":[function() {},{}],"kVUjx":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const reportWebVitals = (onPerfEntry)=>{
@@ -41319,6 +41606,6 @@ exports.default = reportWebVitals;
 },{"f4c877097322f78b":"eAq7w","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"eAq7w":[function(require,module,exports,__globalThis) {
 module.exports = import("./web-vitals.644781b3.js").then(()=>module.bundle.root('iiST0'));
 
-},{"iiST0":"iiST0"}]},["4VwAv","4dmnR"], "4dmnR", "parcelRequirea5ff", {}, null, null, "http://localhost:3000")
+},{"iiST0":"iiST0"}]},["4VwAv","4dmnR"], "4dmnR", "parcelRequirea5ff", {}, "./", "/", "http://localhost:3000")
 
 //# sourceMappingURL=hillaryvance.github.io.6efbc4f8.js.map
