@@ -25,3 +25,5 @@ yarn-error.log*
 
 # GitHub Pages Build Directory
 /build
+/.parcel-cache
+dist/

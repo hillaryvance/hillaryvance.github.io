@@ -28,11 +28,21 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Baltiholm';
+  src: url('/assets/Baltiholm-lg2n0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'Baltiholm', sans-serif;
+  font-size: 80px;
+  margin-bottom: 0.25rem;
+}
+
+.About-me {
+  margin-top: 0;
+  max-width: 75%;
+  text-align: justify;
 }
