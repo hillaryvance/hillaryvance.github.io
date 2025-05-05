@@ -75521,8 +75521,6 @@ parcelHelpers.export(exports, "ScienceLesson", ()=>ScienceLesson);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _htmlReactParser = require("html-react-parser");
-var _htmlReactParserDefault = parcelHelpers.interopDefault(_htmlReactParser);
 var _material = require("@mui/material");
 const Section = ({ title, subtitle, children })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Paper), {
         variant: "outlined",
@@ -75545,23 +75543,14 @@ const Section = ({ title, subtitle, children })=>/*#__PURE__*/ (0, _jsxDevRuntim
                         children: title
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 23,
+                        lineNumber: 22,
                         columnNumber: 7
                     }, undefined),
-                    subtitle && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
-                        variant: "subtitle2",
-                        color: "text.secondary",
-                        gutterBottom: true,
-                        children: (0, _htmlReactParserDefault.default)(subtitle)
-                    }, void 0, false, {
-                        fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, undefined)
+                    subtitle
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 22,
+                lineNumber: 21,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Divider), {
@@ -75570,14 +75559,14 @@ const Section = ({ title, subtitle, children })=>/*#__PURE__*/ (0, _jsxDevRuntim
                 }
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 32,
+                lineNumber: 27,
                 columnNumber: 5
             }, undefined),
             children
         ]
     }, void 0, true, {
         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-        lineNumber: 21,
+        lineNumber: 20,
         columnNumber: 3
     }, undefined);
 _c = Section;
@@ -75595,7 +75584,7 @@ const ChecklistSection = ({ heading, description })=>/*#__PURE__*/ (0, _jsxDevRu
                 children: heading
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 45,
+                lineNumber: 40,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75606,17 +75595,37 @@ const ChecklistSection = ({ heading, description })=>/*#__PURE__*/ (0, _jsxDevRu
                 children: description
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 51,
+                lineNumber: 46,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-        lineNumber: 44,
+        lineNumber: 39,
         columnNumber: 3
     }, undefined);
 _c1 = ChecklistSection;
 function NarrativeWritingLesson() {
+    const Subtitle = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+        variant: "subtitle2",
+        color: "text.secondary",
+        gutterBottom: true,
+        children: [
+            "Specific ways that ",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("em", {
+                children: "academic language"
+            }, void 0, false, {
+                fileName: "src/components/lesson-plan/lesson-plan.tsx",
+                lineNumber: 55,
+                columnNumber: 26
+            }, this),
+            " is used in reading, writing, listening, and/or speaking."
+        ]
+    }, void 0, true, {
+        fileName: "src/components/lesson-plan/lesson-plan.tsx",
+        lineNumber: 54,
+        columnNumber: 5
+    }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
         sx: {
             p: 2
@@ -75634,24 +75643,24 @@ function NarrativeWritingLesson() {
                 children: "Narrative Writing Revision"
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 60,
+                lineNumber: 62,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(DirectInstructionLesson, {}, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 69,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
                 title: "Language Demands",
-                subtitle: "Specific ways that <em>academic language</em> is used in reading, writing, listening, and/or speaking.",
+                subtitle: Subtitle,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
                         heading: "Language Function(s)",
                         description: "Identify: Students will identify the plot, setting, characters, problem and solution, text evidence from the source, and others from their narrative editing and revising checklist within their own narrative writing."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 76,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
@@ -75659,7 +75668,7 @@ function NarrativeWritingLesson() {
                         description: "Narrative, Text evidence, Revise, Edit, Plot, Setting, Source"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 81,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
@@ -75667,7 +75676,7 @@ function NarrativeWritingLesson() {
                         description: "Discourse: Through whole group discussion and partner discussion, students will verbalize some things they could do to revise and edit their narrative. This gives other students within the group/class a chance to hear other ideas to help inform their thinking and support the thinking of the group. Students will collaborate in discussion using the lesson defined vocabulary."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 86,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
@@ -75675,13 +75684,13 @@ function NarrativeWritingLesson() {
                         description: "Modeling of an activity will be used during guided practice. The teacher will model to students how they can use the narrative checklist to help them during their revision of their narrative."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 91,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 71,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -75697,7 +75706,7 @@ function NarrativeWritingLesson() {
                         children: "Anticipatory Set"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 98,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75716,7 +75725,7 @@ function NarrativeWritingLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 101,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75727,13 +75736,13 @@ function NarrativeWritingLesson() {
                                         children: "The lesson will open by engaging students in a group discussion about their prior knowledge about the narrative checklist."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 107,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 102,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75748,7 +75757,7 @@ function NarrativeWritingLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75759,13 +75768,13 @@ function NarrativeWritingLesson() {
                                         children: "Students will participate in the whole group instruction and answer questions about narratives and the editing process."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 119,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 114,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75780,7 +75789,7 @@ function NarrativeWritingLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 127,
+                                        lineNumber: 125,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75792,25 +75801,25 @@ function NarrativeWritingLesson() {
                                             "The teacher will display the checklist that students will be using to revise and edit their story. The teacher will then ask students to share a paragraph or two from their narrative and as a class help them revise those paragraphs while using the checklist.",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                                lineNumber: 138,
+                                                lineNumber: 136,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 137,
                                                 columnNumber: 15
                                             }, this),
                                             '"We have a completed draft of our narrative, now we get to go back to our draft to make it even better. Writers do this by rereading their work and checking for places that they can improve their piece and make it even more interesting to their audience."'
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 131,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 126,
+                                lineNumber: 124,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75825,7 +75834,7 @@ function NarrativeWritingLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 145,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75836,19 +75845,19 @@ function NarrativeWritingLesson() {
                                         children: "Students will participate in the whole group discussion on how the checklist will help them."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 153,
+                                        lineNumber: 151,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 146,
+                                lineNumber: 144,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 101,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75861,7 +75870,7 @@ function NarrativeWritingLesson() {
                         children: "Guided Practice"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 160,
+                        lineNumber: 158,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75880,7 +75889,7 @@ function NarrativeWritingLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 163,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75891,13 +75900,13 @@ function NarrativeWritingLesson() {
                                         children: "While the students are in their groups of 2 or 3, the teacher will explain that they are going to pair up and read each other\u2019s writing and then revise/edit their partner's story using the checklist."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 169,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 164,
+                                lineNumber: 162,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75912,7 +75921,7 @@ function NarrativeWritingLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 177,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75923,19 +75932,19 @@ function NarrativeWritingLesson() {
                                         children: "Students will reread their narrative and look for areas that need revision or editing. Writers will pair up and share their stories and edit/revise their narrative using the checklist."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 183,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 178,
+                                lineNumber: 176,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 163,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75948,7 +75957,7 @@ function NarrativeWritingLesson() {
                         children: "Independent Student Practice"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 193,
+                        lineNumber: 191,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75967,7 +75976,7 @@ function NarrativeWritingLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 198,
+                                        lineNumber: 196,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -75978,13 +75987,13 @@ function NarrativeWritingLesson() {
                                         children: "During this activity, the teacher will circulate the room to ensure that the students are on task and engaged in the activity. While circulating, the teacher will ask the students questions about their work and offer feedback as needed."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 204,
+                                        lineNumber: 202,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 197,
+                                lineNumber: 195,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -75999,7 +76008,7 @@ function NarrativeWritingLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 212,
+                                        lineNumber: 210,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76010,31 +76019,31 @@ function NarrativeWritingLesson() {
                                         children: "Students will continue working on their narrative story."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 216,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 211,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 196,
+                        lineNumber: 194,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 97,
+                lineNumber: 95,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-        lineNumber: 59,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 }
@@ -76061,14 +76070,14 @@ function DirectInstructionLesson() {
                                             children: "Lesson Title:"
                                         }, void 0, false, {
                                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                            lineNumber: 235,
+                                            lineNumber: 233,
                                             columnNumber: 15
                                         }, this),
                                         " Revise and Edit Narrative Writing"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                    lineNumber: 234,
+                                    lineNumber: 232,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76080,20 +76089,20 @@ function DirectInstructionLesson() {
                                             children: "Subject(s):"
                                         }, void 0, false, {
                                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                            lineNumber: 238,
+                                            lineNumber: 236,
                                             columnNumber: 15
                                         }, this),
                                         " Writing"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                    lineNumber: 237,
+                                    lineNumber: 235,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                            lineNumber: 233,
+                            lineNumber: 231,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76107,30 +76116,30 @@ function DirectInstructionLesson() {
                                         children: "Grade/Level/Setting:"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 243,
+                                        lineNumber: 241,
                                         columnNumber: 15
                                     }, this),
                                     " This is a 5th Grade class consisting of 25 students, ages 10\u201311. There are 2 students with 504 plans, 3 students who receive tier 2 level reading assistance, and 1 ELL student. Students are grouped into 4."
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 242,
+                                lineNumber: 240,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                            lineNumber: 241,
+                            lineNumber: 239,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                    lineNumber: 232,
+                    lineNumber: 230,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 231,
+                lineNumber: 229,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -76143,7 +76152,7 @@ function DirectInstructionLesson() {
                         children: "Students should have prior knowledge of On Demand Writing."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 253,
+                        lineNumber: 251,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76153,13 +76162,13 @@ function DirectInstructionLesson() {
                         children: "Students should have prior knowledge of what a Narrative writing is."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 256,
+                        lineNumber: 254,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 252,
+                lineNumber: 250,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -76174,14 +76183,14 @@ function DirectInstructionLesson() {
                                 children: "W.5.3:"
                             }, void 0, false, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 263,
+                                lineNumber: 261,
                                 columnNumber: 11
                             }, this),
                             " Write narratives to develop real or imagined experiences or events using effective technique, descriptive details, and clear event sequences."
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 262,
+                        lineNumber: 260,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76193,20 +76202,20 @@ function DirectInstructionLesson() {
                                 children: "W.5.5:"
                             }, void 0, false, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 268,
+                                lineNumber: 266,
                                 columnNumber: 11
                             }, this),
                             " With guidance and support from peers and adults, develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach."
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 267,
+                        lineNumber: 265,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 261,
+                lineNumber: 259,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -76220,19 +76229,19 @@ function DirectInstructionLesson() {
                             children: "Objective 1:"
                         }, void 0, false, {
                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                            lineNumber: 276,
+                            lineNumber: 274,
                             columnNumber: 11
                         }, this),
                         " When revising and editing their narrative writing, students should accurately use their editing checklist with 90% accuracy."
                     ]
                 }, void 0, true, {
                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                    lineNumber: 275,
+                    lineNumber: 273,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 274,
+                lineNumber: 272,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76254,7 +76263,7 @@ function DirectInstructionLesson() {
                                     children: "Instructional Materials:"
                                 }, void 0, false, {
                                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 283,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.List), {
@@ -76276,28 +76285,28 @@ function DirectInstructionLesson() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                                lineNumber: 303,
+                                                lineNumber: 301,
                                                 columnNumber: 19
                                             }, this)
                                         }, index, false, {
                                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                            lineNumber: 302,
+                                            lineNumber: 300,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                    lineNumber: 292,
+                                    lineNumber: 290,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                            lineNumber: 284,
+                            lineNumber: 282,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 283,
+                        lineNumber: 281,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76314,14 +76323,14 @@ function DirectInstructionLesson() {
                                             children: "SAMR Level:"
                                         }, void 0, false, {
                                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                            lineNumber: 312,
+                                            lineNumber: 310,
                                             columnNumber: 15
                                         }, this),
                                         " Augmentation"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                    lineNumber: 311,
+                                    lineNumber: 309,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76332,30 +76341,30 @@ function DirectInstructionLesson() {
                                     children: "The SMARTboard will be used to display the writing task and model how to revise a story. Displaying the writing lesson on the SMARTboard works as a teaching tool that provides functional improvements to the lesson by having more of a visual for students when learning new material. The PowerPoint displays the lesson objectives and instructions for the students to refer to while completing their work."
                                 }, void 0, false, {
                                     fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                    lineNumber: 314,
+                                    lineNumber: 312,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                            lineNumber: 310,
+                            lineNumber: 308,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 309,
+                        lineNumber: 307,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 282,
+                lineNumber: 280,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-        lineNumber: 230,
+        lineNumber: 228,
         columnNumber: 5
     }, this);
 }
@@ -76378,7 +76387,7 @@ function ScienceLesson() {
                 children: "Science Lesson"
             }, void 0, false, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 333,
+                lineNumber: 331,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -76390,7 +76399,7 @@ function ScienceLesson() {
                         description: "Identify: Students will identify the plot, setting, characters, problem and solution, text evidence from the source, and others from their narrative editing and revising checklist within their own narrative writing."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 347,
+                        lineNumber: 345,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
@@ -76398,7 +76407,7 @@ function ScienceLesson() {
                         description: "Narrative, Text evidence, Revise, Edit, Plot, Setting, Source"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 352,
+                        lineNumber: 350,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
@@ -76406,7 +76415,7 @@ function ScienceLesson() {
                         description: "Discourse: Through whole group discussion and partner discussion, students will verbalize some things they could do to revise and edit their narrative. This gives other students within the group/class a chance to hear other ideas to help inform their thinking and support the thinking of the group. Students will collaborate in discussion using the lesson defined vocabulary."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 357,
+                        lineNumber: 355,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChecklistSection, {
@@ -76414,13 +76423,13 @@ function ScienceLesson() {
                         description: "Modeling of an activity will be used during guided practice. The teacher will model to students how they can use the narrative checklist to help them during their revision of their narrative."
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 362,
+                        lineNumber: 360,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 342,
+                lineNumber: 340,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -76436,7 +76445,7 @@ function ScienceLesson() {
                         children: "Anticipatory Set"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 369,
+                        lineNumber: 367,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76455,7 +76464,7 @@ function ScienceLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 374,
+                                        lineNumber: 372,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76466,13 +76475,13 @@ function ScienceLesson() {
                                         children: "The lesson will open by engaging students in a group discussion about their prior knowledge about the narrative checklist."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 380,
+                                        lineNumber: 378,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 373,
+                                lineNumber: 371,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76487,7 +76496,7 @@ function ScienceLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 386,
+                                        lineNumber: 384,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76498,13 +76507,13 @@ function ScienceLesson() {
                                         children: "Students will participate in the whole group instruction and answer questions about narratives and the editing process."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 392,
+                                        lineNumber: 390,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 385,
+                                lineNumber: 383,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76519,7 +76528,7 @@ function ScienceLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 398,
+                                        lineNumber: 396,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76531,25 +76540,25 @@ function ScienceLesson() {
                                             "The teacher will display the checklist that students will be using to revise and edit their story. The teacher will then ask students to share a paragraph or two from their narrative and as a class help them revise those paragraphs while using the checklist.",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                                lineNumber: 409,
+                                                lineNumber: 407,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                                lineNumber: 410,
+                                                lineNumber: 408,
                                                 columnNumber: 15
                                             }, this),
                                             '"We have a completed draft of our narrative, now we get to go back to our draft to make it even better. Writers do this by rereading their work and checking for places that they can improve their piece and make it even more interesting to their audience."'
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 404,
+                                        lineNumber: 402,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 397,
+                                lineNumber: 395,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76564,7 +76573,7 @@ function ScienceLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 418,
+                                        lineNumber: 416,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76575,19 +76584,19 @@ function ScienceLesson() {
                                         children: "Students will participate in the whole group discussion on how the checklist will help them."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 424,
+                                        lineNumber: 422,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 417,
+                                lineNumber: 415,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 372,
+                        lineNumber: 370,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76600,7 +76609,7 @@ function ScienceLesson() {
                         children: "Guided Practice"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 431,
+                        lineNumber: 429,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76619,7 +76628,7 @@ function ScienceLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 436,
+                                        lineNumber: 434,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76630,13 +76639,13 @@ function ScienceLesson() {
                                         children: "While the students are in their groups of 2 or 3, the teacher will explain that they are going to pair up and read each other\u2019s writing and then revise/edit their partner's story using the checklist."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 442,
+                                        lineNumber: 440,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 435,
+                                lineNumber: 433,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76651,7 +76660,7 @@ function ScienceLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 450,
+                                        lineNumber: 448,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76662,19 +76671,19 @@ function ScienceLesson() {
                                         children: "Students will reread their narrative and look for areas that need revision or editing. Writers will pair up and share their stories and edit/revise their narrative using the checklist."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 456,
+                                        lineNumber: 454,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 449,
+                                lineNumber: 447,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 434,
+                        lineNumber: 432,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76687,7 +76696,7 @@ function ScienceLesson() {
                         children: "Independent Student Practice"
                     }, void 0, false, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 464,
+                        lineNumber: 462,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76706,7 +76715,7 @@ function ScienceLesson() {
                                         children: "Activity Description/Teacher"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 469,
+                                        lineNumber: 467,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76717,13 +76726,13 @@ function ScienceLesson() {
                                         children: "During this activity, the teacher will circulate the room to ensure that the students are on task and engaged in the activity. While circulating, the teacher will ask the students questions about their work and offer feedback as needed."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 475,
+                                        lineNumber: 473,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 468,
+                                lineNumber: 466,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Grid), {
@@ -76738,7 +76747,7 @@ function ScienceLesson() {
                                         children: "Student Actions"
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 483,
+                                        lineNumber: 481,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
@@ -76749,31 +76758,31 @@ function ScienceLesson() {
                                         children: "Students will continue working on their narrative story."
                                     }, void 0, false, {
                                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                        lineNumber: 489,
+                                        lineNumber: 487,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                                lineNumber: 482,
+                                lineNumber: 480,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                        lineNumber: 467,
+                        lineNumber: 465,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/lesson-plan/lesson-plan.tsx",
-                lineNumber: 368,
+                lineNumber: 366,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/lesson-plan/lesson-plan.tsx",
-        lineNumber: 332,
+        lineNumber: 330,
         columnNumber: 5
     }, this);
 }
@@ -76790,2744 +76799,7 @@ $RefreshReg$(_c4, "ScienceLesson");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","html-react-parser":"j3IhX"}],"j3IhX":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "attributesToProps", ()=>(0, _indexJs.attributesToProps));
-parcelHelpers.export(exports, "Comment", ()=>(0, _indexJs.Comment));
-parcelHelpers.export(exports, "domToReact", ()=>(0, _indexJs.domToReact));
-parcelHelpers.export(exports, "Element", ()=>(0, _indexJs.Element));
-parcelHelpers.export(exports, "htmlToDOM", ()=>(0, _indexJs.htmlToDOM));
-parcelHelpers.export(exports, "ProcessingInstruction", ()=>(0, _indexJs.ProcessingInstruction));
-parcelHelpers.export(exports, "Text", ()=>(0, _indexJs.Text));
-var _indexJs = require("../lib/index.js");
-var _indexJsDefault = parcelHelpers.interopDefault(_indexJs);
-exports.default = (0, _indexJsDefault.default).default || (0, _indexJsDefault.default);
-
-},{"../lib/index.js":"15mOW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"15mOW":[function(require,module,exports,__globalThis) {
-"use strict";
-var __importDefault = this && this.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : {
-        "default": mod
-    };
-};
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.htmlToDOM = exports.domToReact = exports.attributesToProps = exports.Text = exports.ProcessingInstruction = exports.Element = exports.Comment = void 0;
-exports.default = HTMLReactParser;
-var html_dom_parser_1 = __importDefault(require("c58c1da32ddd0ed2"));
-exports.htmlToDOM = html_dom_parser_1.default;
-var attributes_to_props_1 = __importDefault(require("e947334d858ca0c8"));
-exports.attributesToProps = attributes_to_props_1.default;
-var dom_to_react_1 = __importDefault(require("7b5511921c5335a3"));
-exports.domToReact = dom_to_react_1.default;
-var domhandler_1 = require("f45776fba4237e44");
-Object.defineProperty(exports, "Comment", {
-    enumerable: true,
-    get: function() {
-        return domhandler_1.Comment;
-    }
-});
-Object.defineProperty(exports, "Element", {
-    enumerable: true,
-    get: function() {
-        return domhandler_1.Element;
-    }
-});
-Object.defineProperty(exports, "ProcessingInstruction", {
-    enumerable: true,
-    get: function() {
-        return domhandler_1.ProcessingInstruction;
-    }
-});
-Object.defineProperty(exports, "Text", {
-    enumerable: true,
-    get: function() {
-        return domhandler_1.Text;
-    }
-});
-var domParserOptions = {
-    lowerCaseAttributeNames: false
-};
-/**
- * Converts HTML string to React elements.
- *
- * @param html - HTML string.
- * @param options - Parser options.
- * @returns - React element(s), empty array, or string.
- */ function HTMLReactParser(html, options) {
-    if (typeof html !== 'string') throw new TypeError('First argument must be a string');
-    if (!html) return [];
-    return (0, dom_to_react_1.default)((0, html_dom_parser_1.default)(html, (options === null || options === void 0 ? void 0 : options.htmlparser2) || domParserOptions), options);
-}
-
-},{"c58c1da32ddd0ed2":"js5oz","e947334d858ca0c8":"eyW2c","7b5511921c5335a3":"4RICp","f45776fba4237e44":"1zq66"}],"js5oz":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlToDomJs = require("../../lib/client/html-to-dom.js");
-var _htmlToDomJsDefault = parcelHelpers.interopDefault(_htmlToDomJs);
-exports.default = (0, _htmlToDomJsDefault.default).default || (0, _htmlToDomJsDefault.default);
-
-},{"../../lib/client/html-to-dom.js":"cA8z6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"cA8z6":[function(require,module,exports,__globalThis) {
-"use strict";
-var __importDefault = this && this.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : {
-        "default": mod
-    };
-};
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = HTMLDOMParser;
-var domparser_1 = __importDefault(require("2ab0d8e23d23421a"));
-var utilities_1 = require("28c5533ea5609ec5");
-var DIRECTIVE_REGEX = /<(![a-zA-Z\s]+)>/; // e.g., <!doctype html>
-/**
- * Parses HTML string to DOM nodes in browser.
- *
- * @param html - HTML markup.
- * @returns - DOM elements.
- */ function HTMLDOMParser(html) {
-    if (typeof html !== 'string') throw new TypeError('First argument must be a string');
-    if (!html) return [];
-    // match directive
-    var match = html.match(DIRECTIVE_REGEX);
-    var directive = match ? match[1] : undefined;
-    return (0, utilities_1.formatDOM)((0, domparser_1.default)(html), null, directive);
-}
-
-},{"2ab0d8e23d23421a":"f6lJD","28c5533ea5609ec5":"jJ1ne"}],"f6lJD":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = domparser;
-var utilities_1 = require("e85c87914baa115c");
-// constants
-var HTML = 'html';
-var HEAD = 'head';
-var BODY = 'body';
-var FIRST_TAG_REGEX = /<([a-zA-Z]+[0-9]?)/; // e.g., <h1>
-// match-all-characters in case of newlines (DOTALL)
-var HEAD_TAG_REGEX = /<head[^]*>/i;
-var BODY_TAG_REGEX = /<body[^]*>/i;
-// falls back to `parseFromString` if `createHTMLDocument` cannot be used
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-var parseFromDocument = function(html, tagName) {
-    /* istanbul ignore next */ throw new Error('This browser does not support `document.implementation.createHTMLDocument`');
-};
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-var parseFromString = function(html, tagName) {
-    /* istanbul ignore next */ throw new Error('This browser does not support `DOMParser.prototype.parseFromString`');
-};
-var DOMParser = typeof window === 'object' && window.DOMParser;
-/**
- * DOMParser (performance: slow).
- *
- * @see https://developer.mozilla.org/docs/Web/API/DOMParser#Parsing_an_SVG_or_HTML_document
- */ if (typeof DOMParser === 'function') {
-    var domParser_1 = new DOMParser();
-    var mimeType_1 = 'text/html';
-    /**
-     * Creates an HTML document using `DOMParser.parseFromString`.
-     *
-     * @param html - The HTML string.
-     * @param tagName - The element to render the HTML (with 'body' as fallback).
-     * @returns - Document.
-     */ parseFromString = function(html, tagName) {
-        if (tagName) /* istanbul ignore next */ html = "<".concat(tagName, ">").concat(html, "</").concat(tagName, ">");
-        return domParser_1.parseFromString(html, mimeType_1);
-    };
-    parseFromDocument = parseFromString;
-}
-/**
- * DOMImplementation (performance: fair).
- *
- * @see https://developer.mozilla.org/docs/Web/API/DOMImplementation/createHTMLDocument
- */ if (typeof document === 'object' && document.implementation) {
-    var htmlDocument_1 = document.implementation.createHTMLDocument();
-    /**
-     * Use HTML document created by `document.implementation.createHTMLDocument`.
-     *
-     * @param html - The HTML string.
-     * @param tagName - The element to render the HTML (with 'body' as fallback).
-     * @returns - Document
-     */ parseFromDocument = function(html, tagName) {
-        if (tagName) {
-            var element = htmlDocument_1.documentElement.querySelector(tagName);
-            if (element) element.innerHTML = html;
-            return htmlDocument_1;
-        }
-        htmlDocument_1.documentElement.innerHTML = html;
-        return htmlDocument_1;
-    };
-}
-/**
- * Template (performance: fast).
- *
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/template
- */ var template = typeof document === 'object' && document.createElement('template');
-var parseFromTemplate;
-if (template && template.content) /**
-     * Uses a template element (content fragment) to parse HTML.
-     *
-     * @param html - HTML string.
-     * @returns - Nodes.
-     */ parseFromTemplate = function(html) {
-    template.innerHTML = html;
-    return template.content.childNodes;
-};
-/**
- * Parses HTML string to DOM nodes.
- *
- * @param html - HTML markup.
- * @returns - DOM nodes.
- */ function domparser(html) {
-    var _a, _b;
-    // Escape special characters before parsing
-    html = (0, utilities_1.escapeSpecialCharacters)(html);
-    var match = html.match(FIRST_TAG_REGEX);
-    var firstTagName = match && match[1] ? match[1].toLowerCase() : '';
-    switch(firstTagName){
-        case HTML:
-            var doc = parseFromString(html);
-            // the created document may come with filler head/body elements,
-            // so make sure to remove them if they don't actually exist
-            if (!HEAD_TAG_REGEX.test(html)) {
-                var element = doc.querySelector(HEAD);
-                (_a = element === null || element === void 0 ? void 0 : element.parentNode) === null || _a === void 0 || _a.removeChild(element);
-            }
-            if (!BODY_TAG_REGEX.test(html)) {
-                var element = doc.querySelector(BODY);
-                (_b = element === null || element === void 0 ? void 0 : element.parentNode) === null || _b === void 0 || _b.removeChild(element);
-            }
-            return doc.querySelectorAll(HTML);
-        case HEAD:
-        case BODY:
-            var elements = parseFromDocument(html).querySelectorAll(firstTagName);
-            // if there's a sibling element, then return both elements
-            if (BODY_TAG_REGEX.test(html) && HEAD_TAG_REGEX.test(html)) return elements[0].parentNode.childNodes;
-            return elements;
-        // low-level tag or text
-        default:
-            if (parseFromTemplate) return parseFromTemplate(html);
-            var element = parseFromDocument(html, BODY).querySelector(BODY);
-            return element.childNodes;
-    }
-}
-
-},{"e85c87914baa115c":"jJ1ne"}],"jJ1ne":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.formatAttributes = formatAttributes;
-exports.escapeSpecialCharacters = escapeSpecialCharacters;
-exports.revertEscapedCharacters = revertEscapedCharacters;
-exports.formatDOM = formatDOM;
-var domhandler_1 = require("9fa8a6b30c516006");
-var constants_1 = require("6be3bf5fd67cd884");
-/**
- * Gets case-sensitive tag name.
- *
- * @param tagName - Tag name in lowercase.
- * @returns - Case-sensitive tag name.
- */ function getCaseSensitiveTagName(tagName) {
-    return constants_1.CASE_SENSITIVE_TAG_NAMES_MAP[tagName];
-}
-/**
- * Formats DOM attributes to a hash map.
- *
- * @param attributes - List of attributes.
- * @returns - Map of attribute name to value.
- */ function formatAttributes(attributes) {
-    var map = {};
-    var index = 0;
-    var attributesLength = attributes.length;
-    // `NamedNodeMap` is array-like
-    for(; index < attributesLength; index++){
-        var attribute = attributes[index];
-        map[attribute.name] = attribute.value;
-    }
-    return map;
-}
-/**
- * Corrects the tag name if it is case-sensitive (SVG).
- * Otherwise, returns the lowercase tag name (HTML).
- *
- * @param tagName - Lowercase tag name.
- * @returns - Formatted tag name.
- */ function formatTagName(tagName) {
-    tagName = tagName.toLowerCase();
-    var caseSensitiveTagName = getCaseSensitiveTagName(tagName);
-    if (caseSensitiveTagName) return caseSensitiveTagName;
-    return tagName;
-}
-/**
- * Escapes special characters before parsing.
- *
- * @param html - The HTML string.
- * @returns - HTML string with escaped special characters.
- */ function escapeSpecialCharacters(html) {
-    return html.replace(constants_1.CARRIAGE_RETURN_REGEX, constants_1.CARRIAGE_RETURN_PLACEHOLDER);
-}
-/**
- * Reverts escaped special characters back to actual characters.
- *
- * @param text - The text with escaped characters.
- * @returns - Text with escaped characters reverted.
- */ function revertEscapedCharacters(text) {
-    return text.replace(constants_1.CARRIAGE_RETURN_PLACEHOLDER_REGEX, constants_1.CARRIAGE_RETURN);
-}
-/**
- * Transforms DOM nodes to `domhandler` nodes.
- *
- * @param nodes - DOM nodes.
- * @param parent - Parent node.
- * @param directive - Directive.
- * @returns - Nodes.
- */ function formatDOM(nodes, parent, directive) {
-    if (parent === void 0) parent = null;
-    var domNodes = [];
-    var current;
-    var index = 0;
-    var nodesLength = nodes.length;
-    for(; index < nodesLength; index++){
-        var node = nodes[index];
-        // set the node data given the type
-        switch(node.nodeType){
-            case 1:
-                var tagName = formatTagName(node.nodeName);
-                // script, style, or tag
-                current = new domhandler_1.Element(tagName, formatAttributes(node.attributes));
-                current.children = formatDOM(// template children are on content
-                tagName === 'template' ? node.content.childNodes : node.childNodes, current);
-                break;
-            case 3:
-                current = new domhandler_1.Text(revertEscapedCharacters(node.nodeValue));
-                break;
-            case 8:
-                current = new domhandler_1.Comment(node.nodeValue);
-                break;
-            default:
-                continue;
-        }
-        // set previous node next
-        var prev = domNodes[index - 1] || null;
-        if (prev) prev.next = current;
-        // set properties for current node
-        current.parent = parent;
-        current.prev = prev;
-        current.next = null;
-        domNodes.push(current);
-    }
-    if (directive) {
-        current = new domhandler_1.ProcessingInstruction(directive.substring(0, directive.indexOf(' ')).toLowerCase(), directive);
-        current.next = domNodes[0] || null;
-        current.parent = parent;
-        domNodes.unshift(current);
-        if (domNodes[1]) domNodes[1].prev = domNodes[0];
-    }
-    return domNodes;
-}
-
-},{"9fa8a6b30c516006":"19tRp","6be3bf5fd67cd884":"biHVX"}],"19tRp":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DomHandler", ()=>DomHandler);
-var _domelementtype = require("domelementtype");
-var _nodeJs = require("./node.js");
-parcelHelpers.exportAll(_nodeJs, exports);
-// Default options
-const defaultOpts = {
-    withStartIndices: false,
-    withEndIndices: false,
-    xmlMode: false
-};
-class DomHandler {
-    /**
-     * @param callback Called once parsing has completed.
-     * @param options Settings for the handler.
-     * @param elementCB Callback whenever a tag is closed.
-     */ constructor(callback, options, elementCB){
-        /** The elements of the DOM */ this.dom = [];
-        /** The root element for the DOM */ this.root = new (0, _nodeJs.Document)(this.dom);
-        /** Indicated whether parsing has been completed. */ this.done = false;
-        /** Stack of open tags. */ this.tagStack = [
-            this.root
-        ];
-        /** A data node that is still being written to. */ this.lastNode = null;
-        /** Reference to the parser instance. Used for location information. */ this.parser = null;
-        // Make it possible to skip arguments, for backwards-compatibility
-        if (typeof options === "function") {
-            elementCB = options;
-            options = defaultOpts;
-        }
-        if (typeof callback === "object") {
-            options = callback;
-            callback = undefined;
-        }
-        this.callback = callback !== null && callback !== void 0 ? callback : null;
-        this.options = options !== null && options !== void 0 ? options : defaultOpts;
-        this.elementCB = elementCB !== null && elementCB !== void 0 ? elementCB : null;
-    }
-    onparserinit(parser) {
-        this.parser = parser;
-    }
-    // Resets the handler back to starting state
-    onreset() {
-        this.dom = [];
-        this.root = new (0, _nodeJs.Document)(this.dom);
-        this.done = false;
-        this.tagStack = [
-            this.root
-        ];
-        this.lastNode = null;
-        this.parser = null;
-    }
-    // Signals the handler that parsing is done
-    onend() {
-        if (this.done) return;
-        this.done = true;
-        this.parser = null;
-        this.handleCallback(null);
-    }
-    onerror(error) {
-        this.handleCallback(error);
-    }
-    onclosetag() {
-        this.lastNode = null;
-        const elem = this.tagStack.pop();
-        if (this.options.withEndIndices) elem.endIndex = this.parser.endIndex;
-        if (this.elementCB) this.elementCB(elem);
-    }
-    onopentag(name, attribs) {
-        const type = this.options.xmlMode ? (0, _domelementtype.ElementType).Tag : undefined;
-        const element = new (0, _nodeJs.Element)(name, attribs, undefined, type);
-        this.addNode(element);
-        this.tagStack.push(element);
-    }
-    ontext(data) {
-        const { lastNode } = this;
-        if (lastNode && lastNode.type === (0, _domelementtype.ElementType).Text) {
-            lastNode.data += data;
-            if (this.options.withEndIndices) lastNode.endIndex = this.parser.endIndex;
-        } else {
-            const node = new (0, _nodeJs.Text)(data);
-            this.addNode(node);
-            this.lastNode = node;
-        }
-    }
-    oncomment(data) {
-        if (this.lastNode && this.lastNode.type === (0, _domelementtype.ElementType).Comment) {
-            this.lastNode.data += data;
-            return;
-        }
-        const node = new (0, _nodeJs.Comment)(data);
-        this.addNode(node);
-        this.lastNode = node;
-    }
-    oncommentend() {
-        this.lastNode = null;
-    }
-    oncdatastart() {
-        const text = new (0, _nodeJs.Text)("");
-        const node = new (0, _nodeJs.CDATA)([
-            text
-        ]);
-        this.addNode(node);
-        text.parent = node;
-        this.lastNode = text;
-    }
-    oncdataend() {
-        this.lastNode = null;
-    }
-    onprocessinginstruction(name, data) {
-        const node = new (0, _nodeJs.ProcessingInstruction)(name, data);
-        this.addNode(node);
-    }
-    handleCallback(error) {
-        if (typeof this.callback === "function") this.callback(error, this.dom);
-        else if (error) throw error;
-    }
-    addNode(node) {
-        const parent = this.tagStack[this.tagStack.length - 1];
-        const previousSibling = parent.children[parent.children.length - 1];
-        if (this.options.withStartIndices) node.startIndex = this.parser.startIndex;
-        if (this.options.withEndIndices) node.endIndex = this.parser.endIndex;
-        parent.children.push(node);
-        if (previousSibling) {
-            node.prev = previousSibling;
-            previousSibling.next = node;
-        }
-        node.parent = parent;
-        this.lastNode = null;
-    }
-}
-exports.default = DomHandler;
-
-},{"domelementtype":"lMEbG","./node.js":"jAUBH","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lMEbG":[function(require,module,exports,__globalThis) {
-/** Types of elements found in htmlparser2's DOM */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ElementType", ()=>ElementType);
-/**
- * Tests whether an element is a tag or not.
- *
- * @param elem Element to test
- */ parcelHelpers.export(exports, "isTag", ()=>isTag);
-parcelHelpers.export(exports, "Root", ()=>Root);
-parcelHelpers.export(exports, "Text", ()=>Text);
-parcelHelpers.export(exports, "Directive", ()=>Directive);
-parcelHelpers.export(exports, "Comment", ()=>Comment);
-parcelHelpers.export(exports, "Script", ()=>Script);
-parcelHelpers.export(exports, "Style", ()=>Style);
-parcelHelpers.export(exports, "Tag", ()=>Tag);
-parcelHelpers.export(exports, "CDATA", ()=>CDATA);
-parcelHelpers.export(exports, "Doctype", ()=>Doctype);
-var ElementType;
-(function(ElementType) {
-    /** Type for the root element of a document */ ElementType["Root"] = "root";
-    /** Type for Text */ ElementType["Text"] = "text";
-    /** Type for <? ... ?> */ ElementType["Directive"] = "directive";
-    /** Type for <!-- ... --> */ ElementType["Comment"] = "comment";
-    /** Type for <script> tags */ ElementType["Script"] = "script";
-    /** Type for <style> tags */ ElementType["Style"] = "style";
-    /** Type for Any tag */ ElementType["Tag"] = "tag";
-    /** Type for <![CDATA[ ... ]]> */ ElementType["CDATA"] = "cdata";
-    /** Type for <!doctype ...> */ ElementType["Doctype"] = "doctype";
-})(ElementType || (ElementType = {}));
-function isTag(elem) {
-    return elem.type === ElementType.Tag || elem.type === ElementType.Script || elem.type === ElementType.Style;
-}
-const Root = ElementType.Root;
-const Text = ElementType.Text;
-const Directive = ElementType.Directive;
-const Comment = ElementType.Comment;
-const Script = ElementType.Script;
-const Style = ElementType.Style;
-const Tag = ElementType.Tag;
-const CDATA = ElementType.CDATA;
-const Doctype = ElementType.Doctype;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jAUBH":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * This object will be used as the prototype for Nodes when creating a
- * DOM-Level-1-compliant structure.
- */ parcelHelpers.export(exports, "Node", ()=>Node);
-/**
- * A node that contains some data.
- */ parcelHelpers.export(exports, "DataNode", ()=>DataNode);
-/**
- * Text within the document.
- */ parcelHelpers.export(exports, "Text", ()=>Text);
-/**
- * Comments within the document.
- */ parcelHelpers.export(exports, "Comment", ()=>Comment);
-/**
- * Processing instructions, including doc types.
- */ parcelHelpers.export(exports, "ProcessingInstruction", ()=>ProcessingInstruction);
-/**
- * A `Node` that can have children.
- */ parcelHelpers.export(exports, "NodeWithChildren", ()=>NodeWithChildren);
-parcelHelpers.export(exports, "CDATA", ()=>CDATA);
-/**
- * The root node of the document.
- */ parcelHelpers.export(exports, "Document", ()=>Document);
-/**
- * An element within the DOM.
- */ parcelHelpers.export(exports, "Element", ()=>Element);
-/**
- * @param node Node to check.
- * @returns `true` if the node is a `Element`, `false` otherwise.
- */ parcelHelpers.export(exports, "isTag", ()=>isTag);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `CDATA`, `false` otherwise.
- */ parcelHelpers.export(exports, "isCDATA", ()=>isCDATA);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `Text`, `false` otherwise.
- */ parcelHelpers.export(exports, "isText", ()=>isText);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `Comment`, `false` otherwise.
- */ parcelHelpers.export(exports, "isComment", ()=>isComment);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `ProcessingInstruction`, `false` otherwise.
- */ parcelHelpers.export(exports, "isDirective", ()=>isDirective);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `ProcessingInstruction`, `false` otherwise.
- */ parcelHelpers.export(exports, "isDocument", ()=>isDocument);
-/**
- * @param node Node to check.
- * @returns `true` if the node has children, `false` otherwise.
- */ parcelHelpers.export(exports, "hasChildren", ()=>hasChildren);
-/**
- * Clone a node, and optionally its children.
- *
- * @param recursive Clone child nodes as well.
- * @returns A clone of the node.
- */ parcelHelpers.export(exports, "cloneNode", ()=>cloneNode);
-var _domelementtype = require("domelementtype");
-class Node {
-    constructor(){
-        /** Parent of the node */ this.parent = null;
-        /** Previous sibling */ this.prev = null;
-        /** Next sibling */ this.next = null;
-        /** The start index of the node. Requires `withStartIndices` on the handler to be `true. */ this.startIndex = null;
-        /** The end index of the node. Requires `withEndIndices` on the handler to be `true. */ this.endIndex = null;
-    }
-    // Read-write aliases for properties
-    /**
-     * Same as {@link parent}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get parentNode() {
-        return this.parent;
-    }
-    set parentNode(parent) {
-        this.parent = parent;
-    }
-    /**
-     * Same as {@link prev}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get previousSibling() {
-        return this.prev;
-    }
-    set previousSibling(prev) {
-        this.prev = prev;
-    }
-    /**
-     * Same as {@link next}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get nextSibling() {
-        return this.next;
-    }
-    set nextSibling(next) {
-        this.next = next;
-    }
-    /**
-     * Clone this node, and optionally its children.
-     *
-     * @param recursive Clone child nodes as well.
-     * @returns A clone of the node.
-     */ cloneNode(recursive = false) {
-        return cloneNode(this, recursive);
-    }
-}
-class DataNode extends Node {
-    /**
-     * @param data The content of the data node
-     */ constructor(data){
-        super();
-        this.data = data;
-    }
-    /**
-     * Same as {@link data}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get nodeValue() {
-        return this.data;
-    }
-    set nodeValue(data) {
-        this.data = data;
-    }
-}
-class Text extends DataNode {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).Text;
-    }
-    get nodeType() {
-        return 3;
-    }
-}
-class Comment extends DataNode {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).Comment;
-    }
-    get nodeType() {
-        return 8;
-    }
-}
-class ProcessingInstruction extends DataNode {
-    constructor(name, data){
-        super(data);
-        this.name = name;
-        this.type = (0, _domelementtype.ElementType).Directive;
-    }
-    get nodeType() {
-        return 1;
-    }
-}
-class NodeWithChildren extends Node {
-    /**
-     * @param children Children of the node. Only certain node types can have children.
-     */ constructor(children){
-        super();
-        this.children = children;
-    }
-    // Aliases
-    /** First child of the node. */ get firstChild() {
-        var _a;
-        return (_a = this.children[0]) !== null && _a !== void 0 ? _a : null;
-    }
-    /** Last child of the node. */ get lastChild() {
-        return this.children.length > 0 ? this.children[this.children.length - 1] : null;
-    }
-    /**
-     * Same as {@link children}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get childNodes() {
-        return this.children;
-    }
-    set childNodes(children) {
-        this.children = children;
-    }
-}
-class CDATA extends NodeWithChildren {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).CDATA;
-    }
-    get nodeType() {
-        return 4;
-    }
-}
-class Document extends NodeWithChildren {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).Root;
-    }
-    get nodeType() {
-        return 9;
-    }
-}
-class Element extends NodeWithChildren {
-    /**
-     * @param name Name of the tag, eg. `div`, `span`.
-     * @param attribs Object mapping attribute names to attribute values.
-     * @param children Children of the node.
-     */ constructor(name, attribs, children = [], type = name === "script" ? (0, _domelementtype.ElementType).Script : name === "style" ? (0, _domelementtype.ElementType).Style : (0, _domelementtype.ElementType).Tag){
-        super(children);
-        this.name = name;
-        this.attribs = attribs;
-        this.type = type;
-    }
-    get nodeType() {
-        return 1;
-    }
-    // DOM Level 1 aliases
-    /**
-     * Same as {@link name}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get tagName() {
-        return this.name;
-    }
-    set tagName(name) {
-        this.name = name;
-    }
-    get attributes() {
-        return Object.keys(this.attribs).map((name)=>{
-            var _a, _b;
-            return {
-                name,
-                value: this.attribs[name],
-                namespace: (_a = this["x-attribsNamespace"]) === null || _a === void 0 ? void 0 : _a[name],
-                prefix: (_b = this["x-attribsPrefix"]) === null || _b === void 0 ? void 0 : _b[name]
-            };
-        });
-    }
-}
-function isTag(node) {
-    return (0, _domelementtype.isTag)(node);
-}
-function isCDATA(node) {
-    return node.type === (0, _domelementtype.ElementType).CDATA;
-}
-function isText(node) {
-    return node.type === (0, _domelementtype.ElementType).Text;
-}
-function isComment(node) {
-    return node.type === (0, _domelementtype.ElementType).Comment;
-}
-function isDirective(node) {
-    return node.type === (0, _domelementtype.ElementType).Directive;
-}
-function isDocument(node) {
-    return node.type === (0, _domelementtype.ElementType).Root;
-}
-function hasChildren(node) {
-    return Object.prototype.hasOwnProperty.call(node, "children");
-}
-function cloneNode(node, recursive = false) {
-    let result;
-    if (isText(node)) result = new Text(node.data);
-    else if (isComment(node)) result = new Comment(node.data);
-    else if (isTag(node)) {
-        const children = recursive ? cloneChildren(node.children) : [];
-        const clone = new Element(node.name, {
-            ...node.attribs
-        }, children);
-        children.forEach((child)=>child.parent = clone);
-        if (node.namespace != null) clone.namespace = node.namespace;
-        if (node["x-attribsNamespace"]) clone["x-attribsNamespace"] = {
-            ...node["x-attribsNamespace"]
-        };
-        if (node["x-attribsPrefix"]) clone["x-attribsPrefix"] = {
-            ...node["x-attribsPrefix"]
-        };
-        result = clone;
-    } else if (isCDATA(node)) {
-        const children = recursive ? cloneChildren(node.children) : [];
-        const clone = new CDATA(children);
-        children.forEach((child)=>child.parent = clone);
-        result = clone;
-    } else if (isDocument(node)) {
-        const children = recursive ? cloneChildren(node.children) : [];
-        const clone = new Document(children);
-        children.forEach((child)=>child.parent = clone);
-        if (node["x-mode"]) clone["x-mode"] = node["x-mode"];
-        result = clone;
-    } else if (isDirective(node)) {
-        const instruction = new ProcessingInstruction(node.name, node.data);
-        if (node["x-name"] != null) {
-            instruction["x-name"] = node["x-name"];
-            instruction["x-publicId"] = node["x-publicId"];
-            instruction["x-systemId"] = node["x-systemId"];
-        }
-        result = instruction;
-    } else throw new Error(`Not implemented yet: ${node.type}`);
-    result.startIndex = node.startIndex;
-    result.endIndex = node.endIndex;
-    if (node.sourceCodeLocation != null) result.sourceCodeLocation = node.sourceCodeLocation;
-    return result;
-}
-function cloneChildren(childs) {
-    const children = childs.map((child)=>cloneNode(child, true));
-    for(let i = 1; i < children.length; i++){
-        children[i].prev = children[i - 1];
-        children[i - 1].next = children[i];
-    }
-    return children;
-}
-
-},{"domelementtype":"lMEbG","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"biHVX":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.CARRIAGE_RETURN_PLACEHOLDER_REGEX = exports.CARRIAGE_RETURN_PLACEHOLDER = exports.CARRIAGE_RETURN_REGEX = exports.CARRIAGE_RETURN = exports.CASE_SENSITIVE_TAG_NAMES_MAP = exports.CASE_SENSITIVE_TAG_NAMES = void 0;
-/**
- * SVG elements are case-sensitive.
- *
- * @see https://developer.mozilla.org/docs/Web/SVG/Element#svg_elements_a_to_z
- */ exports.CASE_SENSITIVE_TAG_NAMES = [
-    'animateMotion',
-    'animateTransform',
-    'clipPath',
-    'feBlend',
-    'feColorMatrix',
-    'feComponentTransfer',
-    'feComposite',
-    'feConvolveMatrix',
-    'feDiffuseLighting',
-    'feDisplacementMap',
-    'feDropShadow',
-    'feFlood',
-    'feFuncA',
-    'feFuncB',
-    'feFuncG',
-    'feFuncR',
-    'feGaussianBlur',
-    'feImage',
-    'feMerge',
-    'feMergeNode',
-    'feMorphology',
-    'feOffset',
-    'fePointLight',
-    'feSpecularLighting',
-    'feSpotLight',
-    'feTile',
-    'feTurbulence',
-    'foreignObject',
-    'linearGradient',
-    'radialGradient',
-    'textPath'
-];
-exports.CASE_SENSITIVE_TAG_NAMES_MAP = exports.CASE_SENSITIVE_TAG_NAMES.reduce(function(accumulator, tagName) {
-    accumulator[tagName.toLowerCase()] = tagName;
-    return accumulator;
-}, {});
-exports.CARRIAGE_RETURN = '\r';
-exports.CARRIAGE_RETURN_REGEX = new RegExp(exports.CARRIAGE_RETURN, 'g');
-exports.CARRIAGE_RETURN_PLACEHOLDER = "__HTML_DOM_PARSER_CARRIAGE_RETURN_PLACEHOLDER_".concat(Date.now(), "__");
-exports.CARRIAGE_RETURN_PLACEHOLDER_REGEX = new RegExp(exports.CARRIAGE_RETURN_PLACEHOLDER, 'g');
-
-},{}],"eyW2c":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = attributesToProps;
-var react_property_1 = require("f48322aabde4e7b1");
-var utilities_1 = require("9f0d281674b3b603");
-// https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components
-// https://developer.mozilla.org/docs/Web/HTML/Attributes
-var UNCONTROLLED_COMPONENT_ATTRIBUTES = [
-    'checked',
-    'value'
-];
-var UNCONTROLLED_COMPONENT_NAMES = [
-    'input',
-    'select',
-    'textarea'
-];
-var valueOnlyInputs = {
-    reset: true,
-    submit: true
-};
-/**
- * Converts HTML/SVG DOM attributes to React props.
- *
- * @param attributes - HTML/SVG DOM attributes.
- * @param nodeName - DOM node name.
- * @returns - React props.
- */ function attributesToProps(attributes, nodeName) {
-    if (attributes === void 0) attributes = {};
-    var props = {};
-    var isInputValueOnly = Boolean(attributes.type && valueOnlyInputs[attributes.type]);
-    for(var attributeName in attributes){
-        var attributeValue = attributes[attributeName];
-        // ARIA (aria-*) or custom data (data-*) attribute
-        if ((0, react_property_1.isCustomAttribute)(attributeName)) {
-            props[attributeName] = attributeValue;
-            continue;
-        }
-        // convert HTML/SVG attribute to React prop
-        var attributeNameLowerCased = attributeName.toLowerCase();
-        var propName = getPropName(attributeNameLowerCased);
-        if (propName) {
-            var propertyInfo = (0, react_property_1.getPropertyInfo)(propName);
-            // convert attribute to uncontrolled component prop (e.g., `value` to `defaultValue`)
-            if (UNCONTROLLED_COMPONENT_ATTRIBUTES.includes(propName) && UNCONTROLLED_COMPONENT_NAMES.includes(nodeName) && !isInputValueOnly) propName = getPropName('default' + attributeNameLowerCased);
-            props[propName] = attributeValue;
-            switch(propertyInfo && propertyInfo.type){
-                case react_property_1.BOOLEAN:
-                    props[propName] = true;
-                    break;
-                case react_property_1.OVERLOADED_BOOLEAN:
-                    if (attributeValue === '') props[propName] = true;
-                    break;
-            }
-            continue;
-        }
-        // preserve custom attribute if React >=16
-        if (utilities_1.PRESERVE_CUSTOM_ATTRIBUTES) props[attributeName] = attributeValue;
-    }
-    // transform inline style to object
-    (0, utilities_1.setStyleProp)(attributes.style, props);
-    return props;
-}
-/**
- * Gets prop name from lowercased attribute name.
- *
- * @param attributeName - Lowercased attribute name.
- * @returns - Prop name.
- */ function getPropName(attributeName) {
-    return react_property_1.possibleStandardNames[attributeName];
-}
-
-},{"f48322aabde4e7b1":"3deD4","9f0d281674b3b603":"6ImJh"}],"3deD4":[function(require,module,exports,__globalThis) {
-'use strict';
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */ // A reserved attribute.
-// It is handled by React separately and shouldn't be written to the DOM.
-const RESERVED = 0;
-// A simple string attribute.
-// Attributes that aren't in the filter are presumed to have this type.
-const STRING = 1;
-// A string attribute that accepts booleans in React. In HTML, these are called
-// "enumerated" attributes with "true" and "false" as possible values.
-// When true, it should be set to a "true" string.
-// When false, it should be set to a "false" string.
-const BOOLEANISH_STRING = 2;
-// A real boolean attribute.
-// When true, it should be present (set either to an empty string or its name).
-// When false, it should be omitted.
-const BOOLEAN = 3;
-// An attribute that can be used as a flag as well as with a value.
-// When true, it should be present (set either to an empty string or its name).
-// When false, it should be omitted.
-// For any other value, should be present with that value.
-const OVERLOADED_BOOLEAN = 4;
-// An attribute that must be numeric or parse as a numeric.
-// When falsy, it should be removed.
-const NUMERIC = 5;
-// An attribute that must be positive numeric or parse as a positive numeric.
-// When falsy, it should be removed.
-const POSITIVE_NUMERIC = 6;
-function getPropertyInfo(name) {
-    return properties.hasOwnProperty(name) ? properties[name] : null;
-}
-function PropertyInfoRecord(name, type, mustUseProperty, attributeName, attributeNamespace, sanitizeURL, removeEmptyString) {
-    this.acceptsBooleans = type === BOOLEANISH_STRING || type === BOOLEAN || type === OVERLOADED_BOOLEAN;
-    this.attributeName = attributeName;
-    this.attributeNamespace = attributeNamespace;
-    this.mustUseProperty = mustUseProperty;
-    this.propertyName = name;
-    this.type = type;
-    this.sanitizeURL = sanitizeURL;
-    this.removeEmptyString = removeEmptyString;
-}
-// When adding attributes to this list, be sure to also add them to
-// the `possibleStandardNames` module to ensure casing and incorrect
-// name warnings.
-const properties = {};
-// These props are reserved by React. They shouldn't be written to the DOM.
-const reservedProps = [
-    'children',
-    'dangerouslySetInnerHTML',
-    // TODO: This prevents the assignment of defaultValue to regular
-    // elements (not just inputs). Now that ReactDOMInput assigns to the
-    // defaultValue property -- do we need this?
-    'defaultValue',
-    'defaultChecked',
-    'innerHTML',
-    'suppressContentEditableWarning',
-    'suppressHydrationWarning',
-    'style'
-];
-reservedProps.forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, RESERVED, false, name, null, false, false);
-});
-// A few React string attributes have a different name.
-// This is a mapping from React prop names to the attribute names.
-[
-    [
-        'acceptCharset',
-        'accept-charset'
-    ],
-    [
-        'className',
-        'class'
-    ],
-    [
-        'htmlFor',
-        'for'
-    ],
-    [
-        'httpEquiv',
-        'http-equiv'
-    ]
-].forEach(([name, attributeName])=>{
-    properties[name] = new PropertyInfoRecord(name, STRING, false, attributeName, null, false, false);
-});
-// These are "enumerated" HTML attributes that accept "true" and "false".
-// In React, we let users pass `true` and `false` even though technically
-// these aren't boolean attributes (they are coerced to strings).
-[
-    'contentEditable',
-    'draggable',
-    'spellCheck',
-    'value'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, BOOLEANISH_STRING, false, name.toLowerCase(), null, false, false);
-});
-// These are "enumerated" SVG attributes that accept "true" and "false".
-// In React, we let users pass `true` and `false` even though technically
-// these aren't boolean attributes (they are coerced to strings).
-// Since these are SVG attributes, their attribute names are case-sensitive.
-[
-    'autoReverse',
-    'externalResourcesRequired',
-    'focusable',
-    'preserveAlpha'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, BOOLEANISH_STRING, false, name, null, false, false);
-});
-// These are HTML boolean attributes.
-[
-    'allowFullScreen',
-    'async',
-    // Note: there is a special case that prevents it from being written to the DOM
-    // on the client side because the browsers are inconsistent. Instead we call focus().
-    'autoFocus',
-    'autoPlay',
-    'controls',
-    'default',
-    'defer',
-    'disabled',
-    'disablePictureInPicture',
-    'disableRemotePlayback',
-    'formNoValidate',
-    'hidden',
-    'loop',
-    'noModule',
-    'noValidate',
-    'open',
-    'playsInline',
-    'readOnly',
-    'required',
-    'reversed',
-    'scoped',
-    'seamless',
-    // Microdata
-    'itemScope'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, BOOLEAN, false, name.toLowerCase(), null, false, false);
-});
-// These are the few React props that we set as DOM properties
-// rather than attributes. These are all booleans.
-[
-    'checked',
-    // Note: `option.selected` is not updated if `select.multiple` is
-    // disabled with `removeAttribute`. We have special logic for handling this.
-    'multiple',
-    'muted',
-    'selected'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, BOOLEAN, true, name, null, false, false);
-});
-// These are HTML attributes that are "overloaded booleans": they behave like
-// booleans, but can also accept a string value.
-[
-    'capture',
-    'download'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, OVERLOADED_BOOLEAN, false, name, null, false, false);
-});
-// These are HTML attributes that must be positive numbers.
-[
-    'cols',
-    'rows',
-    'size',
-    'span'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, POSITIVE_NUMERIC, false, name, null, false, false);
-});
-// These are HTML attributes that must be numbers.
-[
-    'rowSpan',
-    'start'
-].forEach((name)=>{
-    properties[name] = new PropertyInfoRecord(name, NUMERIC, false, name.toLowerCase(), null, false, false);
-});
-const CAMELIZE = /[\-\:]([a-z])/g;
-const capitalize = (token)=>token[1].toUpperCase();
-// This is a list of all SVG attributes that need special casing, namespacing,
-// or boolean value assignment. Regular attributes that just accept strings
-// and have the same names are omitted, just like in the HTML attribute filter.
-// Some of these attributes can be hard to find. This list was created by
-// scraping the MDN documentation.
-[
-    'accent-height',
-    'alignment-baseline',
-    'arabic-form',
-    'baseline-shift',
-    'cap-height',
-    'clip-path',
-    'clip-rule',
-    'color-interpolation',
-    'color-interpolation-filters',
-    'color-profile',
-    'color-rendering',
-    'dominant-baseline',
-    'enable-background',
-    'fill-opacity',
-    'fill-rule',
-    'flood-color',
-    'flood-opacity',
-    'font-family',
-    'font-size',
-    'font-size-adjust',
-    'font-stretch',
-    'font-style',
-    'font-variant',
-    'font-weight',
-    'glyph-name',
-    'glyph-orientation-horizontal',
-    'glyph-orientation-vertical',
-    'horiz-adv-x',
-    'horiz-origin-x',
-    'image-rendering',
-    'letter-spacing',
-    'lighting-color',
-    'marker-end',
-    'marker-mid',
-    'marker-start',
-    'overline-position',
-    'overline-thickness',
-    'paint-order',
-    'panose-1',
-    'pointer-events',
-    'rendering-intent',
-    'shape-rendering',
-    'stop-color',
-    'stop-opacity',
-    'strikethrough-position',
-    'strikethrough-thickness',
-    'stroke-dasharray',
-    'stroke-dashoffset',
-    'stroke-linecap',
-    'stroke-linejoin',
-    'stroke-miterlimit',
-    'stroke-opacity',
-    'stroke-width',
-    'text-anchor',
-    'text-decoration',
-    'text-rendering',
-    'underline-position',
-    'underline-thickness',
-    'unicode-bidi',
-    'unicode-range',
-    'units-per-em',
-    'v-alphabetic',
-    'v-hanging',
-    'v-ideographic',
-    'v-mathematical',
-    'vector-effect',
-    'vert-adv-y',
-    'vert-origin-x',
-    'vert-origin-y',
-    'word-spacing',
-    'writing-mode',
-    'xmlns:xlink',
-    'x-height'
-].forEach((attributeName)=>{
-    const name = attributeName.replace(CAMELIZE, capitalize);
-    properties[name] = new PropertyInfoRecord(name, STRING, false, attributeName, null, false, false);
-});
-// String SVG attributes with the xlink namespace.
-[
-    'xlink:actuate',
-    'xlink:arcrole',
-    'xlink:role',
-    'xlink:show',
-    'xlink:title',
-    'xlink:type'
-].forEach((attributeName)=>{
-    const name = attributeName.replace(CAMELIZE, capitalize);
-    properties[name] = new PropertyInfoRecord(name, STRING, false, attributeName, 'http://www.w3.org/1999/xlink', false, false);
-});
-// String SVG attributes with the xml namespace.
-[
-    'xml:base',
-    'xml:lang',
-    'xml:space'
-].forEach((attributeName)=>{
-    const name = attributeName.replace(CAMELIZE, capitalize);
-    properties[name] = new PropertyInfoRecord(name, STRING, false, attributeName, 'http://www.w3.org/XML/1998/namespace', false, false);
-});
-// These attribute exists both in HTML and SVG.
-// The attribute name is case-sensitive in SVG so we can't just use
-// the React name like we do for attributes that exist only in HTML.
-[
-    'tabIndex',
-    'crossOrigin'
-].forEach((attributeName)=>{
-    properties[attributeName] = new PropertyInfoRecord(attributeName, STRING, false, attributeName.toLowerCase(), null, false, false);
-});
-// These attributes accept URLs. These must not allow javascript: URLS.
-// These will also need to accept Trusted Types object in the future.
-const xlinkHref = 'xlinkHref';
-properties[xlinkHref] = new PropertyInfoRecord('xlinkHref', STRING, false, 'xlink:href', 'http://www.w3.org/1999/xlink', true, false);
-[
-    'src',
-    'href',
-    'action',
-    'formAction'
-].forEach((attributeName)=>{
-    properties[attributeName] = new PropertyInfoRecord(attributeName, STRING, false, attributeName.toLowerCase(), null, true, true);
-});
-// 
-const { CAMELCASE, SAME, possibleStandardNames: possibleStandardNamesOptimized } = require("9ac9344711c5e413");
-const ATTRIBUTE_NAME_START_CHAR = ':A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD';
-const ATTRIBUTE_NAME_CHAR = ATTRIBUTE_NAME_START_CHAR + '\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040';
-/**
- * Checks whether a property name is a custom attribute.
- *
- * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L23-L25
- *
- * @type {(attribute: string) => boolean}
- */ const isCustomAttribute = RegExp.prototype.test.bind(// eslint-disable-next-line no-misleading-character-class
-new RegExp('^(data|aria)-[' + ATTRIBUTE_NAME_CHAR + ']*$'));
-/**
- * @type {Record<string, string>}
- */ const possibleStandardNames = Object.keys(possibleStandardNamesOptimized).reduce((accumulator, standardName)=>{
-    const propName = possibleStandardNamesOptimized[standardName];
-    if (propName === SAME) accumulator[standardName] = standardName;
-    else if (propName === CAMELCASE) accumulator[standardName.toLowerCase()] = standardName;
-    else accumulator[standardName] = propName;
-    return accumulator;
-}, {});
-exports.BOOLEAN = BOOLEAN;
-exports.BOOLEANISH_STRING = BOOLEANISH_STRING;
-exports.NUMERIC = NUMERIC;
-exports.OVERLOADED_BOOLEAN = OVERLOADED_BOOLEAN;
-exports.POSITIVE_NUMERIC = POSITIVE_NUMERIC;
-exports.RESERVED = RESERVED;
-exports.STRING = STRING;
-exports.getPropertyInfo = getPropertyInfo;
-exports.isCustomAttribute = isCustomAttribute;
-exports.possibleStandardNames = possibleStandardNames;
-
-},{"9ac9344711c5e413":"dD3hY"}],"dD3hY":[function(require,module,exports,__globalThis) {
-// An attribute in which the DOM/SVG standard name is the same as the React prop name (e.g., 'accept').
-var SAME = 0;
-exports.SAME = SAME;
-// An attribute in which the React prop name is the camelcased version of the DOM/SVG standard name (e.g., 'acceptCharset').
-var CAMELCASE = 1;
-exports.CAMELCASE = CAMELCASE;
-exports.possibleStandardNames = {
-    accept: 0,
-    acceptCharset: 1,
-    'accept-charset': 'acceptCharset',
-    accessKey: 1,
-    action: 0,
-    allowFullScreen: 1,
-    alt: 0,
-    as: 0,
-    async: 0,
-    autoCapitalize: 1,
-    autoComplete: 1,
-    autoCorrect: 1,
-    autoFocus: 1,
-    autoPlay: 1,
-    autoSave: 1,
-    capture: 0,
-    cellPadding: 1,
-    cellSpacing: 1,
-    challenge: 0,
-    charSet: 1,
-    checked: 0,
-    children: 0,
-    cite: 0,
-    class: 'className',
-    classID: 1,
-    className: 1,
-    cols: 0,
-    colSpan: 1,
-    content: 0,
-    contentEditable: 1,
-    contextMenu: 1,
-    controls: 0,
-    controlsList: 1,
-    coords: 0,
-    crossOrigin: 1,
-    dangerouslySetInnerHTML: 1,
-    data: 0,
-    dateTime: 1,
-    default: 0,
-    defaultChecked: 1,
-    defaultValue: 1,
-    defer: 0,
-    dir: 0,
-    disabled: 0,
-    disablePictureInPicture: 1,
-    disableRemotePlayback: 1,
-    download: 0,
-    draggable: 0,
-    encType: 1,
-    enterKeyHint: 1,
-    for: 'htmlFor',
-    form: 0,
-    formMethod: 1,
-    formAction: 1,
-    formEncType: 1,
-    formNoValidate: 1,
-    formTarget: 1,
-    frameBorder: 1,
-    headers: 0,
-    height: 0,
-    hidden: 0,
-    high: 0,
-    href: 0,
-    hrefLang: 1,
-    htmlFor: 1,
-    httpEquiv: 1,
-    'http-equiv': 'httpEquiv',
-    icon: 0,
-    id: 0,
-    innerHTML: 1,
-    inputMode: 1,
-    integrity: 0,
-    is: 0,
-    itemID: 1,
-    itemProp: 1,
-    itemRef: 1,
-    itemScope: 1,
-    itemType: 1,
-    keyParams: 1,
-    keyType: 1,
-    kind: 0,
-    label: 0,
-    lang: 0,
-    list: 0,
-    loop: 0,
-    low: 0,
-    manifest: 0,
-    marginWidth: 1,
-    marginHeight: 1,
-    max: 0,
-    maxLength: 1,
-    media: 0,
-    mediaGroup: 1,
-    method: 0,
-    min: 0,
-    minLength: 1,
-    multiple: 0,
-    muted: 0,
-    name: 0,
-    noModule: 1,
-    nonce: 0,
-    noValidate: 1,
-    open: 0,
-    optimum: 0,
-    pattern: 0,
-    placeholder: 0,
-    playsInline: 1,
-    poster: 0,
-    preload: 0,
-    profile: 0,
-    radioGroup: 1,
-    readOnly: 1,
-    referrerPolicy: 1,
-    rel: 0,
-    required: 0,
-    reversed: 0,
-    role: 0,
-    rows: 0,
-    rowSpan: 1,
-    sandbox: 0,
-    scope: 0,
-    scoped: 0,
-    scrolling: 0,
-    seamless: 0,
-    selected: 0,
-    shape: 0,
-    size: 0,
-    sizes: 0,
-    span: 0,
-    spellCheck: 1,
-    src: 0,
-    srcDoc: 1,
-    srcLang: 1,
-    srcSet: 1,
-    start: 0,
-    step: 0,
-    style: 0,
-    summary: 0,
-    tabIndex: 1,
-    target: 0,
-    title: 0,
-    type: 0,
-    useMap: 1,
-    value: 0,
-    width: 0,
-    wmode: 0,
-    wrap: 0,
-    about: 0,
-    accentHeight: 1,
-    'accent-height': 'accentHeight',
-    accumulate: 0,
-    additive: 0,
-    alignmentBaseline: 1,
-    'alignment-baseline': 'alignmentBaseline',
-    allowReorder: 1,
-    alphabetic: 0,
-    amplitude: 0,
-    arabicForm: 1,
-    'arabic-form': 'arabicForm',
-    ascent: 0,
-    attributeName: 1,
-    attributeType: 1,
-    autoReverse: 1,
-    azimuth: 0,
-    baseFrequency: 1,
-    baselineShift: 1,
-    'baseline-shift': 'baselineShift',
-    baseProfile: 1,
-    bbox: 0,
-    begin: 0,
-    bias: 0,
-    by: 0,
-    calcMode: 1,
-    capHeight: 1,
-    'cap-height': 'capHeight',
-    clip: 0,
-    clipPath: 1,
-    'clip-path': 'clipPath',
-    clipPathUnits: 1,
-    clipRule: 1,
-    'clip-rule': 'clipRule',
-    color: 0,
-    colorInterpolation: 1,
-    'color-interpolation': 'colorInterpolation',
-    colorInterpolationFilters: 1,
-    'color-interpolation-filters': 'colorInterpolationFilters',
-    colorProfile: 1,
-    'color-profile': 'colorProfile',
-    colorRendering: 1,
-    'color-rendering': 'colorRendering',
-    contentScriptType: 1,
-    contentStyleType: 1,
-    cursor: 0,
-    cx: 0,
-    cy: 0,
-    d: 0,
-    datatype: 0,
-    decelerate: 0,
-    descent: 0,
-    diffuseConstant: 1,
-    direction: 0,
-    display: 0,
-    divisor: 0,
-    dominantBaseline: 1,
-    'dominant-baseline': 'dominantBaseline',
-    dur: 0,
-    dx: 0,
-    dy: 0,
-    edgeMode: 1,
-    elevation: 0,
-    enableBackground: 1,
-    'enable-background': 'enableBackground',
-    end: 0,
-    exponent: 0,
-    externalResourcesRequired: 1,
-    fill: 0,
-    fillOpacity: 1,
-    'fill-opacity': 'fillOpacity',
-    fillRule: 1,
-    'fill-rule': 'fillRule',
-    filter: 0,
-    filterRes: 1,
-    filterUnits: 1,
-    floodOpacity: 1,
-    'flood-opacity': 'floodOpacity',
-    floodColor: 1,
-    'flood-color': 'floodColor',
-    focusable: 0,
-    fontFamily: 1,
-    'font-family': 'fontFamily',
-    fontSize: 1,
-    'font-size': 'fontSize',
-    fontSizeAdjust: 1,
-    'font-size-adjust': 'fontSizeAdjust',
-    fontStretch: 1,
-    'font-stretch': 'fontStretch',
-    fontStyle: 1,
-    'font-style': 'fontStyle',
-    fontVariant: 1,
-    'font-variant': 'fontVariant',
-    fontWeight: 1,
-    'font-weight': 'fontWeight',
-    format: 0,
-    from: 0,
-    fx: 0,
-    fy: 0,
-    g1: 0,
-    g2: 0,
-    glyphName: 1,
-    'glyph-name': 'glyphName',
-    glyphOrientationHorizontal: 1,
-    'glyph-orientation-horizontal': 'glyphOrientationHorizontal',
-    glyphOrientationVertical: 1,
-    'glyph-orientation-vertical': 'glyphOrientationVertical',
-    glyphRef: 1,
-    gradientTransform: 1,
-    gradientUnits: 1,
-    hanging: 0,
-    horizAdvX: 1,
-    'horiz-adv-x': 'horizAdvX',
-    horizOriginX: 1,
-    'horiz-origin-x': 'horizOriginX',
-    ideographic: 0,
-    imageRendering: 1,
-    'image-rendering': 'imageRendering',
-    in2: 0,
-    in: 0,
-    inlist: 0,
-    intercept: 0,
-    k1: 0,
-    k2: 0,
-    k3: 0,
-    k4: 0,
-    k: 0,
-    kernelMatrix: 1,
-    kernelUnitLength: 1,
-    kerning: 0,
-    keyPoints: 1,
-    keySplines: 1,
-    keyTimes: 1,
-    lengthAdjust: 1,
-    letterSpacing: 1,
-    'letter-spacing': 'letterSpacing',
-    lightingColor: 1,
-    'lighting-color': 'lightingColor',
-    limitingConeAngle: 1,
-    local: 0,
-    markerEnd: 1,
-    'marker-end': 'markerEnd',
-    markerHeight: 1,
-    markerMid: 1,
-    'marker-mid': 'markerMid',
-    markerStart: 1,
-    'marker-start': 'markerStart',
-    markerUnits: 1,
-    markerWidth: 1,
-    mask: 0,
-    maskContentUnits: 1,
-    maskUnits: 1,
-    mathematical: 0,
-    mode: 0,
-    numOctaves: 1,
-    offset: 0,
-    opacity: 0,
-    operator: 0,
-    order: 0,
-    orient: 0,
-    orientation: 0,
-    origin: 0,
-    overflow: 0,
-    overlinePosition: 1,
-    'overline-position': 'overlinePosition',
-    overlineThickness: 1,
-    'overline-thickness': 'overlineThickness',
-    paintOrder: 1,
-    'paint-order': 'paintOrder',
-    panose1: 0,
-    'panose-1': 'panose1',
-    pathLength: 1,
-    patternContentUnits: 1,
-    patternTransform: 1,
-    patternUnits: 1,
-    pointerEvents: 1,
-    'pointer-events': 'pointerEvents',
-    points: 0,
-    pointsAtX: 1,
-    pointsAtY: 1,
-    pointsAtZ: 1,
-    prefix: 0,
-    preserveAlpha: 1,
-    preserveAspectRatio: 1,
-    primitiveUnits: 1,
-    property: 0,
-    r: 0,
-    radius: 0,
-    refX: 1,
-    refY: 1,
-    renderingIntent: 1,
-    'rendering-intent': 'renderingIntent',
-    repeatCount: 1,
-    repeatDur: 1,
-    requiredExtensions: 1,
-    requiredFeatures: 1,
-    resource: 0,
-    restart: 0,
-    result: 0,
-    results: 0,
-    rotate: 0,
-    rx: 0,
-    ry: 0,
-    scale: 0,
-    security: 0,
-    seed: 0,
-    shapeRendering: 1,
-    'shape-rendering': 'shapeRendering',
-    slope: 0,
-    spacing: 0,
-    specularConstant: 1,
-    specularExponent: 1,
-    speed: 0,
-    spreadMethod: 1,
-    startOffset: 1,
-    stdDeviation: 1,
-    stemh: 0,
-    stemv: 0,
-    stitchTiles: 1,
-    stopColor: 1,
-    'stop-color': 'stopColor',
-    stopOpacity: 1,
-    'stop-opacity': 'stopOpacity',
-    strikethroughPosition: 1,
-    'strikethrough-position': 'strikethroughPosition',
-    strikethroughThickness: 1,
-    'strikethrough-thickness': 'strikethroughThickness',
-    string: 0,
-    stroke: 0,
-    strokeDasharray: 1,
-    'stroke-dasharray': 'strokeDasharray',
-    strokeDashoffset: 1,
-    'stroke-dashoffset': 'strokeDashoffset',
-    strokeLinecap: 1,
-    'stroke-linecap': 'strokeLinecap',
-    strokeLinejoin: 1,
-    'stroke-linejoin': 'strokeLinejoin',
-    strokeMiterlimit: 1,
-    'stroke-miterlimit': 'strokeMiterlimit',
-    strokeWidth: 1,
-    'stroke-width': 'strokeWidth',
-    strokeOpacity: 1,
-    'stroke-opacity': 'strokeOpacity',
-    suppressContentEditableWarning: 1,
-    suppressHydrationWarning: 1,
-    surfaceScale: 1,
-    systemLanguage: 1,
-    tableValues: 1,
-    targetX: 1,
-    targetY: 1,
-    textAnchor: 1,
-    'text-anchor': 'textAnchor',
-    textDecoration: 1,
-    'text-decoration': 'textDecoration',
-    textLength: 1,
-    textRendering: 1,
-    'text-rendering': 'textRendering',
-    to: 0,
-    transform: 0,
-    typeof: 0,
-    u1: 0,
-    u2: 0,
-    underlinePosition: 1,
-    'underline-position': 'underlinePosition',
-    underlineThickness: 1,
-    'underline-thickness': 'underlineThickness',
-    unicode: 0,
-    unicodeBidi: 1,
-    'unicode-bidi': 'unicodeBidi',
-    unicodeRange: 1,
-    'unicode-range': 'unicodeRange',
-    unitsPerEm: 1,
-    'units-per-em': 'unitsPerEm',
-    unselectable: 0,
-    vAlphabetic: 1,
-    'v-alphabetic': 'vAlphabetic',
-    values: 0,
-    vectorEffect: 1,
-    'vector-effect': 'vectorEffect',
-    version: 0,
-    vertAdvY: 1,
-    'vert-adv-y': 'vertAdvY',
-    vertOriginX: 1,
-    'vert-origin-x': 'vertOriginX',
-    vertOriginY: 1,
-    'vert-origin-y': 'vertOriginY',
-    vHanging: 1,
-    'v-hanging': 'vHanging',
-    vIdeographic: 1,
-    'v-ideographic': 'vIdeographic',
-    viewBox: 1,
-    viewTarget: 1,
-    visibility: 0,
-    vMathematical: 1,
-    'v-mathematical': 'vMathematical',
-    vocab: 0,
-    widths: 0,
-    wordSpacing: 1,
-    'word-spacing': 'wordSpacing',
-    writingMode: 1,
-    'writing-mode': 'writingMode',
-    x1: 0,
-    x2: 0,
-    x: 0,
-    xChannelSelector: 1,
-    xHeight: 1,
-    'x-height': 'xHeight',
-    xlinkActuate: 1,
-    'xlink:actuate': 'xlinkActuate',
-    xlinkArcrole: 1,
-    'xlink:arcrole': 'xlinkArcrole',
-    xlinkHref: 1,
-    'xlink:href': 'xlinkHref',
-    xlinkRole: 1,
-    'xlink:role': 'xlinkRole',
-    xlinkShow: 1,
-    'xlink:show': 'xlinkShow',
-    xlinkTitle: 1,
-    'xlink:title': 'xlinkTitle',
-    xlinkType: 1,
-    'xlink:type': 'xlinkType',
-    xmlBase: 1,
-    'xml:base': 'xmlBase',
-    xmlLang: 1,
-    'xml:lang': 'xmlLang',
-    xmlns: 0,
-    'xml:space': 'xmlSpace',
-    xmlnsXlink: 1,
-    'xmlns:xlink': 'xmlnsXlink',
-    xmlSpace: 1,
-    y1: 0,
-    y2: 0,
-    y: 0,
-    yChannelSelector: 1,
-    z: 0,
-    zoomAndPan: 1
-};
-
-},{}],"6ImJh":[function(require,module,exports,__globalThis) {
-"use strict";
-var __importDefault = this && this.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : {
-        "default": mod
-    };
-};
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.returnFirstArg = exports.canTextBeChildOfNode = exports.ELEMENTS_WITH_NO_TEXT_CHILDREN = exports.PRESERVE_CUSTOM_ATTRIBUTES = void 0;
-exports.isCustomComponent = isCustomComponent;
-exports.setStyleProp = setStyleProp;
-var react_1 = require("b1cb1b3034b1c960");
-var style_to_js_1 = __importDefault(require("bdaa71267fd00108"));
-var RESERVED_SVG_MATHML_ELEMENTS = new Set([
-    'annotation-xml',
-    'color-profile',
-    'font-face',
-    'font-face-src',
-    'font-face-uri',
-    'font-face-format',
-    'font-face-name',
-    'missing-glyph'
-]);
-/**
- * Check if a tag is a custom component.
- *
- * @see {@link https://github.com/facebook/react/blob/v16.6.3/packages/react-dom/src/shared/isCustomComponent.js}
- *
- * @param tagName - Tag name.
- * @param props - Props passed to the element.
- * @returns - Whether the tag is custom component.
- */ function isCustomComponent(tagName, props) {
-    if (!tagName.includes('-')) return Boolean(props && typeof props.is === 'string');
-    // These are reserved SVG and MathML elements.
-    // We don't mind this whitelist too much because we expect it to never grow.
-    // The alternative is to track the namespace in a few places which is convoluted.
-    // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
-    if (RESERVED_SVG_MATHML_ELEMENTS.has(tagName)) return false;
-    return true;
-}
-var styleOptions = {
-    reactCompat: true
-};
-/**
- * Sets style prop.
- *
- * @param style - Inline style.
- * @param props - Props object.
- */ function setStyleProp(style, props) {
-    if (typeof style !== 'string') return;
-    if (!style.trim()) {
-        props.style = {};
-        return;
-    }
-    try {
-        props.style = (0, style_to_js_1.default)(style, styleOptions);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-        props.style = {};
-    }
-}
-/**
- * @see https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html
- */ exports.PRESERVE_CUSTOM_ATTRIBUTES = Number(react_1.version.split('.')[0]) >= 16;
-/**
- * @see https://github.com/facebook/react/blob/cae635054e17a6f107a39d328649137b83f25972/packages/react-dom/src/client/validateDOMNesting.js#L213
- */ exports.ELEMENTS_WITH_NO_TEXT_CHILDREN = new Set([
-    'tr',
-    'tbody',
-    'thead',
-    'tfoot',
-    'colgroup',
-    'table',
-    'head',
-    'html',
-    'frameset'
-]);
-/**
- * Checks if the given node can contain text nodes
- *
- * @param node - Element node.
- * @returns - Whether the node can contain text nodes.
- */ var canTextBeChildOfNode = function(node) {
-    return !exports.ELEMENTS_WITH_NO_TEXT_CHILDREN.has(node.name);
-};
-exports.canTextBeChildOfNode = canTextBeChildOfNode;
-/**
- * Returns the first argument as is.
- *
- * @param arg - The argument to be returned.
- * @returns - The input argument `arg`.
- */ var returnFirstArg = function(arg) {
-    return arg;
-};
-exports.returnFirstArg = returnFirstArg;
-
-},{"b1cb1b3034b1c960":"jMk1U","bdaa71267fd00108":"iynA9"}],"iynA9":[function(require,module,exports,__globalThis) {
-"use strict";
-var __importDefault = this && this.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : {
-        "default": mod
-    };
-};
-var style_to_object_1 = __importDefault(require("addfc2082a8581f8"));
-var utilities_1 = require("c247c029b724bbe9");
-/**
- * Parses CSS inline style to JavaScript object (camelCased).
- */ function StyleToJS(style, options) {
-    var output = {};
-    if (!style || typeof style !== 'string') return output;
-    (0, style_to_object_1.default)(style, function(property, value) {
-        // skip CSS comment
-        if (property && value) output[(0, utilities_1.camelCase)(property, options)] = value;
-    });
-    return output;
-}
-StyleToJS.default = StyleToJS;
-module.exports = StyleToJS;
-
-},{"addfc2082a8581f8":"dHLuS","c247c029b724bbe9":"bdbws"}],"dHLuS":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _indexJs = require("../cjs/index.js");
-var _indexJsDefault = parcelHelpers.interopDefault(_indexJs);
-// ensure compatibility with rollup umd build
-exports.default = (0, _indexJsDefault.default).default || (0, _indexJsDefault.default);
-
-},{"../cjs/index.js":"dJ4uM","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"dJ4uM":[function(require,module,exports,__globalThis) {
-"use strict";
-var __importDefault = this && this.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : {
-        "default": mod
-    };
-};
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = StyleToObject;
-var inline_style_parser_1 = __importDefault(require("2ba9386652217ec0"));
-/**
- * Parses inline style to object.
- *
- * @param style - Inline style.
- * @param iterator - Iterator.
- * @returns - Style object or null.
- *
- * @example Parsing inline style to object:
- *
- * ```js
- * import parse from 'style-to-object';
- * parse('line-height: 42;'); // { 'line-height': '42' }
- * ```
- */ function StyleToObject(style, iterator) {
-    var styleObject = null;
-    if (!style || typeof style !== 'string') return styleObject;
-    var declarations = (0, inline_style_parser_1.default)(style);
-    var hasIterator = typeof iterator === 'function';
-    declarations.forEach(function(declaration) {
-        if (declaration.type !== 'declaration') return;
-        var property = declaration.property, value = declaration.value;
-        if (hasIterator) iterator(property, value, declaration);
-        else if (value) {
-            styleObject = styleObject || {};
-            styleObject[property] = value;
-        }
-    });
-    return styleObject;
-}
-
-},{"2ba9386652217ec0":"b3dat"}],"b3dat":[function(require,module,exports,__globalThis) {
-// http://www.w3.org/TR/CSS21/grammar.html
-// https://github.com/visionmedia/css-parse/pull/49#issuecomment-30088027
-var COMMENT_REGEX = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
-var NEWLINE_REGEX = /\n/g;
-var WHITESPACE_REGEX = /^\s*/;
-// declaration
-var PROPERTY_REGEX = /^(\*?[-#/*\\\w]+(\[[0-9a-z_-]+\])?)\s*/;
-var COLON_REGEX = /^:\s*/;
-var VALUE_REGEX = /^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/;
-var SEMICOLON_REGEX = /^[;\s]*/;
-// https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/Trim#Polyfill
-var TRIM_REGEX = /^\s+|\s+$/g;
-// strings
-var NEWLINE = '\n';
-var FORWARD_SLASH = '/';
-var ASTERISK = '*';
-var EMPTY_STRING = '';
-// types
-var TYPE_COMMENT = 'comment';
-var TYPE_DECLARATION = 'declaration';
-/**
- * @param {String} style
- * @param {Object} [options]
- * @return {Object[]}
- * @throws {TypeError}
- * @throws {Error}
- */ module.exports = function(style, options) {
-    if (typeof style !== 'string') throw new TypeError('First argument must be a string');
-    if (!style) return [];
-    options = options || {};
-    /**
-   * Positional.
-   */ var lineno = 1;
-    var column = 1;
-    /**
-   * Update lineno and column based on `str`.
-   *
-   * @param {String} str
-   */ function updatePosition(str) {
-        var lines = str.match(NEWLINE_REGEX);
-        if (lines) lineno += lines.length;
-        var i = str.lastIndexOf(NEWLINE);
-        column = ~i ? str.length - i : column + str.length;
-    }
-    /**
-   * Mark position and patch `node.position`.
-   *
-   * @return {Function}
-   */ function position() {
-        var start = {
-            line: lineno,
-            column: column
-        };
-        return function(node) {
-            node.position = new Position(start);
-            whitespace();
-            return node;
-        };
-    }
-    /**
-   * Store position information for a node.
-   *
-   * @constructor
-   * @property {Object} start
-   * @property {Object} end
-   * @property {undefined|String} source
-   */ function Position(start) {
-        this.start = start;
-        this.end = {
-            line: lineno,
-            column: column
-        };
-        this.source = options.source;
-    }
-    /**
-   * Non-enumerable source string.
-   */ Position.prototype.content = style;
-    var errorsList = [];
-    /**
-   * Error `msg`.
-   *
-   * @param {String} msg
-   * @throws {Error}
-   */ function error(msg) {
-        var err = new Error(options.source + ':' + lineno + ':' + column + ': ' + msg);
-        err.reason = msg;
-        err.filename = options.source;
-        err.line = lineno;
-        err.column = column;
-        err.source = style;
-        if (options.silent) errorsList.push(err);
-        else throw err;
-    }
-    /**
-   * Match `re` and return captures.
-   *
-   * @param {RegExp} re
-   * @return {undefined|Array}
-   */ function match(re) {
-        var m = re.exec(style);
-        if (!m) return;
-        var str = m[0];
-        updatePosition(str);
-        style = style.slice(str.length);
-        return m;
-    }
-    /**
-   * Parse whitespace.
-   */ function whitespace() {
-        match(WHITESPACE_REGEX);
-    }
-    /**
-   * Parse comments.
-   *
-   * @param {Object[]} [rules]
-   * @return {Object[]}
-   */ function comments(rules) {
-        var c;
-        rules = rules || [];
-        while(c = comment())if (c !== false) rules.push(c);
-        return rules;
-    }
-    /**
-   * Parse comment.
-   *
-   * @return {Object}
-   * @throws {Error}
-   */ function comment() {
-        var pos = position();
-        if (FORWARD_SLASH != style.charAt(0) || ASTERISK != style.charAt(1)) return;
-        var i = 2;
-        while(EMPTY_STRING != style.charAt(i) && (ASTERISK != style.charAt(i) || FORWARD_SLASH != style.charAt(i + 1)))++i;
-        i += 2;
-        if (EMPTY_STRING === style.charAt(i - 1)) return error('End of comment missing');
-        var str = style.slice(2, i - 2);
-        column += 2;
-        updatePosition(str);
-        style = style.slice(i);
-        column += 2;
-        return pos({
-            type: TYPE_COMMENT,
-            comment: str
-        });
-    }
-    /**
-   * Parse declaration.
-   *
-   * @return {Object}
-   * @throws {Error}
-   */ function declaration() {
-        var pos = position();
-        // prop
-        var prop = match(PROPERTY_REGEX);
-        if (!prop) return;
-        comment();
-        // :
-        if (!match(COLON_REGEX)) return error("property missing ':'");
-        // val
-        var val = match(VALUE_REGEX);
-        var ret = pos({
-            type: TYPE_DECLARATION,
-            property: trim(prop[0].replace(COMMENT_REGEX, EMPTY_STRING)),
-            value: val ? trim(val[0].replace(COMMENT_REGEX, EMPTY_STRING)) : EMPTY_STRING
-        });
-        // ;
-        match(SEMICOLON_REGEX);
-        return ret;
-    }
-    /**
-   * Parse declarations.
-   *
-   * @return {Object[]}
-   */ function declarations() {
-        var decls = [];
-        comments(decls);
-        // declarations
-        var decl;
-        while(decl = declaration())if (decl !== false) {
-            decls.push(decl);
-            comments(decls);
-        }
-        return decls;
-    }
-    whitespace();
-    return declarations();
-};
-/**
- * Trim `str`.
- *
- * @param {String} str
- * @return {String}
- */ function trim(str) {
-    return str ? str.replace(TRIM_REGEX, EMPTY_STRING) : EMPTY_STRING;
-}
-
-},{}],"bdbws":[function(require,module,exports,__globalThis) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.camelCase = void 0;
-var CUSTOM_PROPERTY_REGEX = /^--[a-zA-Z0-9_-]+$/;
-var HYPHEN_REGEX = /-([a-z])/g;
-var NO_HYPHEN_REGEX = /^[^-]+$/;
-var VENDOR_PREFIX_REGEX = /^-(webkit|moz|ms|o|khtml)-/;
-var MS_VENDOR_PREFIX_REGEX = /^-(ms)-/;
-/**
- * Checks whether to skip camelCase.
- */ var skipCamelCase = function(property) {
-    return !property || NO_HYPHEN_REGEX.test(property) || CUSTOM_PROPERTY_REGEX.test(property);
-};
-/**
- * Replacer that capitalizes first character.
- */ var capitalize = function(match, character) {
-    return character.toUpperCase();
-};
-/**
- * Replacer that removes beginning hyphen of vendor prefix property.
- */ var trimHyphen = function(match, prefix) {
-    return "".concat(prefix, "-");
-};
-/**
- * CamelCases a CSS property.
- */ var camelCase = function(property, options) {
-    if (options === void 0) options = {};
-    if (skipCamelCase(property)) return property;
-    property = property.toLowerCase();
-    if (options.reactCompat) // `-ms` vendor prefix should not be capitalized
-    property = property.replace(MS_VENDOR_PREFIX_REGEX, trimHyphen);
-    else // for non-React, remove first hyphen so vendor prefix is not capitalized
-    property = property.replace(VENDOR_PREFIX_REGEX, trimHyphen);
-    return property.replace(HYPHEN_REGEX, capitalize);
-};
-exports.camelCase = camelCase;
-
-},{}],"4RICp":[function(require,module,exports,__globalThis) {
-"use strict";
-var __importDefault = this && this.__importDefault || function(mod) {
-    return mod && mod.__esModule ? mod : {
-        "default": mod
-    };
-};
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = domToReact;
-var react_1 = require("731ac75943b91dde");
-var attributes_to_props_1 = __importDefault(require("3094f08771d33e7b"));
-var utilities_1 = require("dde6c4a3b7b6adbf");
-var React = {
-    cloneElement: react_1.cloneElement,
-    createElement: react_1.createElement,
-    isValidElement: react_1.isValidElement
-};
-/**
- * Converts DOM nodes to JSX element(s).
- *
- * @param nodes - DOM nodes.
- * @param options - Options.
- * @returns - String or JSX element(s).
- */ function domToReact(nodes, options) {
-    if (options === void 0) options = {};
-    var reactElements = [];
-    var hasReplace = typeof options.replace === 'function';
-    var transform = options.transform || utilities_1.returnFirstArg;
-    var _a = options.library || React, cloneElement = _a.cloneElement, createElement = _a.createElement, isValidElement = _a.isValidElement;
-    var nodesLength = nodes.length;
-    for(var index = 0; index < nodesLength; index++){
-        var node = nodes[index];
-        // replace with custom React element (if present)
-        if (hasReplace) {
-            var replaceElement = options.replace(node, index);
-            if (isValidElement(replaceElement)) {
-                // set "key" prop for sibling elements
-                // https://react.dev/learn/rendering-lists#rules-of-keys
-                if (nodesLength > 1) replaceElement = cloneElement(replaceElement, {
-                    key: replaceElement.key || index
-                });
-                reactElements.push(transform(replaceElement, node, index));
-                continue;
-            }
-        }
-        if (node.type === 'text') {
-            var isWhitespace = !node.data.trim().length;
-            // We have a whitespace node that can't be nested in its parent
-            // so skip it
-            if (isWhitespace && node.parent && !(0, utilities_1.canTextBeChildOfNode)(node.parent)) continue;
-            // Trim is enabled and we have a whitespace node
-            // so skip it
-            if (options.trim && isWhitespace) continue;
-            // We have a text node that's not whitespace and it can be nested
-            // in its parent so add it to the results
-            reactElements.push(transform(node.data, node, index));
-            continue;
-        }
-        var element = node;
-        var props = {};
-        if (skipAttributesToProps(element)) {
-            (0, utilities_1.setStyleProp)(element.attribs.style, element.attribs);
-            props = element.attribs;
-        } else if (element.attribs) props = (0, attributes_to_props_1.default)(element.attribs, element.name);
-        var children = void 0;
-        switch(node.type){
-            case 'script':
-            case 'style':
-                // prevent text in <script> or <style> from being escaped
-                // https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html
-                if (node.children[0]) props.dangerouslySetInnerHTML = {
-                    __html: node.children[0].data
-                };
-                break;
-            case 'tag':
-                // setting textarea value in children is an antipattern in React
-                // https://react.dev/reference/react-dom/components/textarea#caveats
-                if (node.name === 'textarea' && node.children[0]) props.defaultValue = node.children[0].data;
-                else if (node.children && node.children.length) // continue recursion of creating React elements (if applicable)
-                children = domToReact(node.children, options);
-                break;
-            // skip all other cases (e.g., comment)
-            default:
-                continue;
-        }
-        // set "key" prop for sibling elements
-        // https://react.dev/learn/rendering-lists#rules-of-keys
-        if (nodesLength > 1) props.key = index;
-        reactElements.push(transform(createElement(node.name, props, children), node, index));
-    }
-    return reactElements.length === 1 ? reactElements[0] : reactElements;
-}
-/**
- * Determines whether DOM element attributes should be transformed to props.
- * Web Components should not have their attributes transformed except for `style`.
- *
- * @param node - Element node.
- * @returns - Whether the node attributes should be converted to props.
- */ function skipAttributesToProps(node) {
-    return utilities_1.PRESERVE_CUSTOM_ATTRIBUTES && node.type === 'tag' && (0, utilities_1.isCustomComponent)(node.name, node.attribs);
-}
-
-},{"731ac75943b91dde":"jMk1U","3094f08771d33e7b":"eyW2c","dde6c4a3b7b6adbf":"6ImJh"}],"1zq66":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DomHandler", ()=>DomHandler);
-var _domelementtype = require("domelementtype");
-var _nodeJs = require("./node.js");
-parcelHelpers.exportAll(_nodeJs, exports);
-// Default options
-const defaultOpts = {
-    withStartIndices: false,
-    withEndIndices: false,
-    xmlMode: false
-};
-class DomHandler {
-    /**
-     * @param callback Called once parsing has completed.
-     * @param options Settings for the handler.
-     * @param elementCB Callback whenever a tag is closed.
-     */ constructor(callback, options, elementCB){
-        /** The elements of the DOM */ this.dom = [];
-        /** The root element for the DOM */ this.root = new (0, _nodeJs.Document)(this.dom);
-        /** Indicated whether parsing has been completed. */ this.done = false;
-        /** Stack of open tags. */ this.tagStack = [
-            this.root
-        ];
-        /** A data node that is still being written to. */ this.lastNode = null;
-        /** Reference to the parser instance. Used for location information. */ this.parser = null;
-        // Make it possible to skip arguments, for backwards-compatibility
-        if (typeof options === "function") {
-            elementCB = options;
-            options = defaultOpts;
-        }
-        if (typeof callback === "object") {
-            options = callback;
-            callback = undefined;
-        }
-        this.callback = callback !== null && callback !== void 0 ? callback : null;
-        this.options = options !== null && options !== void 0 ? options : defaultOpts;
-        this.elementCB = elementCB !== null && elementCB !== void 0 ? elementCB : null;
-    }
-    onparserinit(parser) {
-        this.parser = parser;
-    }
-    // Resets the handler back to starting state
-    onreset() {
-        this.dom = [];
-        this.root = new (0, _nodeJs.Document)(this.dom);
-        this.done = false;
-        this.tagStack = [
-            this.root
-        ];
-        this.lastNode = null;
-        this.parser = null;
-    }
-    // Signals the handler that parsing is done
-    onend() {
-        if (this.done) return;
-        this.done = true;
-        this.parser = null;
-        this.handleCallback(null);
-    }
-    onerror(error) {
-        this.handleCallback(error);
-    }
-    onclosetag() {
-        this.lastNode = null;
-        const elem = this.tagStack.pop();
-        if (this.options.withEndIndices) elem.endIndex = this.parser.endIndex;
-        if (this.elementCB) this.elementCB(elem);
-    }
-    onopentag(name, attribs) {
-        const type = this.options.xmlMode ? (0, _domelementtype.ElementType).Tag : undefined;
-        const element = new (0, _nodeJs.Element)(name, attribs, undefined, type);
-        this.addNode(element);
-        this.tagStack.push(element);
-    }
-    ontext(data) {
-        const { lastNode } = this;
-        if (lastNode && lastNode.type === (0, _domelementtype.ElementType).Text) {
-            lastNode.data += data;
-            if (this.options.withEndIndices) lastNode.endIndex = this.parser.endIndex;
-        } else {
-            const node = new (0, _nodeJs.Text)(data);
-            this.addNode(node);
-            this.lastNode = node;
-        }
-    }
-    oncomment(data) {
-        if (this.lastNode && this.lastNode.type === (0, _domelementtype.ElementType).Comment) {
-            this.lastNode.data += data;
-            return;
-        }
-        const node = new (0, _nodeJs.Comment)(data);
-        this.addNode(node);
-        this.lastNode = node;
-    }
-    oncommentend() {
-        this.lastNode = null;
-    }
-    oncdatastart() {
-        const text = new (0, _nodeJs.Text)("");
-        const node = new (0, _nodeJs.CDATA)([
-            text
-        ]);
-        this.addNode(node);
-        text.parent = node;
-        this.lastNode = text;
-    }
-    oncdataend() {
-        this.lastNode = null;
-    }
-    onprocessinginstruction(name, data) {
-        const node = new (0, _nodeJs.ProcessingInstruction)(name, data);
-        this.addNode(node);
-    }
-    handleCallback(error) {
-        if (typeof this.callback === "function") this.callback(error, this.dom);
-        else if (error) throw error;
-    }
-    addNode(node) {
-        const parent = this.tagStack[this.tagStack.length - 1];
-        const previousSibling = parent.children[parent.children.length - 1];
-        if (this.options.withStartIndices) node.startIndex = this.parser.startIndex;
-        if (this.options.withEndIndices) node.endIndex = this.parser.endIndex;
-        parent.children.push(node);
-        if (previousSibling) {
-            node.prev = previousSibling;
-            previousSibling.next = node;
-        }
-        node.parent = parent;
-        this.lastNode = null;
-    }
-}
-exports.default = DomHandler;
-
-},{"domelementtype":"lMEbG","./node.js":"hiwxr","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hiwxr":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * This object will be used as the prototype for Nodes when creating a
- * DOM-Level-1-compliant structure.
- */ parcelHelpers.export(exports, "Node", ()=>Node);
-/**
- * A node that contains some data.
- */ parcelHelpers.export(exports, "DataNode", ()=>DataNode);
-/**
- * Text within the document.
- */ parcelHelpers.export(exports, "Text", ()=>Text);
-/**
- * Comments within the document.
- */ parcelHelpers.export(exports, "Comment", ()=>Comment);
-/**
- * Processing instructions, including doc types.
- */ parcelHelpers.export(exports, "ProcessingInstruction", ()=>ProcessingInstruction);
-/**
- * A `Node` that can have children.
- */ parcelHelpers.export(exports, "NodeWithChildren", ()=>NodeWithChildren);
-parcelHelpers.export(exports, "CDATA", ()=>CDATA);
-/**
- * The root node of the document.
- */ parcelHelpers.export(exports, "Document", ()=>Document);
-/**
- * An element within the DOM.
- */ parcelHelpers.export(exports, "Element", ()=>Element);
-/**
- * @param node Node to check.
- * @returns `true` if the node is a `Element`, `false` otherwise.
- */ parcelHelpers.export(exports, "isTag", ()=>isTag);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `CDATA`, `false` otherwise.
- */ parcelHelpers.export(exports, "isCDATA", ()=>isCDATA);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `Text`, `false` otherwise.
- */ parcelHelpers.export(exports, "isText", ()=>isText);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `Comment`, `false` otherwise.
- */ parcelHelpers.export(exports, "isComment", ()=>isComment);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `ProcessingInstruction`, `false` otherwise.
- */ parcelHelpers.export(exports, "isDirective", ()=>isDirective);
-/**
- * @param node Node to check.
- * @returns `true` if the node has the type `ProcessingInstruction`, `false` otherwise.
- */ parcelHelpers.export(exports, "isDocument", ()=>isDocument);
-/**
- * @param node Node to check.
- * @returns `true` if the node has children, `false` otherwise.
- */ parcelHelpers.export(exports, "hasChildren", ()=>hasChildren);
-/**
- * Clone a node, and optionally its children.
- *
- * @param recursive Clone child nodes as well.
- * @returns A clone of the node.
- */ parcelHelpers.export(exports, "cloneNode", ()=>cloneNode);
-var _domelementtype = require("domelementtype");
-class Node {
-    constructor(){
-        /** Parent of the node */ this.parent = null;
-        /** Previous sibling */ this.prev = null;
-        /** Next sibling */ this.next = null;
-        /** The start index of the node. Requires `withStartIndices` on the handler to be `true. */ this.startIndex = null;
-        /** The end index of the node. Requires `withEndIndices` on the handler to be `true. */ this.endIndex = null;
-    }
-    // Read-write aliases for properties
-    /**
-     * Same as {@link parent}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get parentNode() {
-        return this.parent;
-    }
-    set parentNode(parent) {
-        this.parent = parent;
-    }
-    /**
-     * Same as {@link prev}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get previousSibling() {
-        return this.prev;
-    }
-    set previousSibling(prev) {
-        this.prev = prev;
-    }
-    /**
-     * Same as {@link next}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get nextSibling() {
-        return this.next;
-    }
-    set nextSibling(next) {
-        this.next = next;
-    }
-    /**
-     * Clone this node, and optionally its children.
-     *
-     * @param recursive Clone child nodes as well.
-     * @returns A clone of the node.
-     */ cloneNode(recursive = false) {
-        return cloneNode(this, recursive);
-    }
-}
-class DataNode extends Node {
-    /**
-     * @param data The content of the data node
-     */ constructor(data){
-        super();
-        this.data = data;
-    }
-    /**
-     * Same as {@link data}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get nodeValue() {
-        return this.data;
-    }
-    set nodeValue(data) {
-        this.data = data;
-    }
-}
-class Text extends DataNode {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).Text;
-    }
-    get nodeType() {
-        return 3;
-    }
-}
-class Comment extends DataNode {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).Comment;
-    }
-    get nodeType() {
-        return 8;
-    }
-}
-class ProcessingInstruction extends DataNode {
-    constructor(name, data){
-        super(data);
-        this.name = name;
-        this.type = (0, _domelementtype.ElementType).Directive;
-    }
-    get nodeType() {
-        return 1;
-    }
-}
-class NodeWithChildren extends Node {
-    /**
-     * @param children Children of the node. Only certain node types can have children.
-     */ constructor(children){
-        super();
-        this.children = children;
-    }
-    // Aliases
-    /** First child of the node. */ get firstChild() {
-        var _a;
-        return (_a = this.children[0]) !== null && _a !== void 0 ? _a : null;
-    }
-    /** Last child of the node. */ get lastChild() {
-        return this.children.length > 0 ? this.children[this.children.length - 1] : null;
-    }
-    /**
-     * Same as {@link children}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get childNodes() {
-        return this.children;
-    }
-    set childNodes(children) {
-        this.children = children;
-    }
-}
-class CDATA extends NodeWithChildren {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).CDATA;
-    }
-    get nodeType() {
-        return 4;
-    }
-}
-class Document extends NodeWithChildren {
-    constructor(){
-        super(...arguments);
-        this.type = (0, _domelementtype.ElementType).Root;
-    }
-    get nodeType() {
-        return 9;
-    }
-}
-class Element extends NodeWithChildren {
-    /**
-     * @param name Name of the tag, eg. `div`, `span`.
-     * @param attribs Object mapping attribute names to attribute values.
-     * @param children Children of the node.
-     */ constructor(name, attribs, children = [], type = name === "script" ? (0, _domelementtype.ElementType).Script : name === "style" ? (0, _domelementtype.ElementType).Style : (0, _domelementtype.ElementType).Tag){
-        super(children);
-        this.name = name;
-        this.attribs = attribs;
-        this.type = type;
-    }
-    get nodeType() {
-        return 1;
-    }
-    // DOM Level 1 aliases
-    /**
-     * Same as {@link name}.
-     * [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
-     */ get tagName() {
-        return this.name;
-    }
-    set tagName(name) {
-        this.name = name;
-    }
-    get attributes() {
-        return Object.keys(this.attribs).map((name)=>{
-            var _a, _b;
-            return {
-                name,
-                value: this.attribs[name],
-                namespace: (_a = this["x-attribsNamespace"]) === null || _a === void 0 ? void 0 : _a[name],
-                prefix: (_b = this["x-attribsPrefix"]) === null || _b === void 0 ? void 0 : _b[name]
-            };
-        });
-    }
-}
-function isTag(node) {
-    return (0, _domelementtype.isTag)(node);
-}
-function isCDATA(node) {
-    return node.type === (0, _domelementtype.ElementType).CDATA;
-}
-function isText(node) {
-    return node.type === (0, _domelementtype.ElementType).Text;
-}
-function isComment(node) {
-    return node.type === (0, _domelementtype.ElementType).Comment;
-}
-function isDirective(node) {
-    return node.type === (0, _domelementtype.ElementType).Directive;
-}
-function isDocument(node) {
-    return node.type === (0, _domelementtype.ElementType).Root;
-}
-function hasChildren(node) {
-    return Object.prototype.hasOwnProperty.call(node, "children");
-}
-function cloneNode(node, recursive = false) {
-    let result;
-    if (isText(node)) result = new Text(node.data);
-    else if (isComment(node)) result = new Comment(node.data);
-    else if (isTag(node)) {
-        const children = recursive ? cloneChildren(node.children) : [];
-        const clone = new Element(node.name, {
-            ...node.attribs
-        }, children);
-        children.forEach((child)=>child.parent = clone);
-        if (node.namespace != null) clone.namespace = node.namespace;
-        if (node["x-attribsNamespace"]) clone["x-attribsNamespace"] = {
-            ...node["x-attribsNamespace"]
-        };
-        if (node["x-attribsPrefix"]) clone["x-attribsPrefix"] = {
-            ...node["x-attribsPrefix"]
-        };
-        result = clone;
-    } else if (isCDATA(node)) {
-        const children = recursive ? cloneChildren(node.children) : [];
-        const clone = new CDATA(children);
-        children.forEach((child)=>child.parent = clone);
-        result = clone;
-    } else if (isDocument(node)) {
-        const children = recursive ? cloneChildren(node.children) : [];
-        const clone = new Document(children);
-        children.forEach((child)=>child.parent = clone);
-        if (node["x-mode"]) clone["x-mode"] = node["x-mode"];
-        result = clone;
-    } else if (isDirective(node)) {
-        const instruction = new ProcessingInstruction(node.name, node.data);
-        if (node["x-name"] != null) {
-            instruction["x-name"] = node["x-name"];
-            instruction["x-publicId"] = node["x-publicId"];
-            instruction["x-systemId"] = node["x-systemId"];
-        }
-        result = instruction;
-    } else throw new Error(`Not implemented yet: ${node.type}`);
-    result.startIndex = node.startIndex;
-    result.endIndex = node.endIndex;
-    if (node.sourceCodeLocation != null) result.sourceCodeLocation = node.sourceCodeLocation;
-    return result;
-}
-function cloneChildren(childs) {
-    const children = childs.map((child)=>cloneNode(child, true));
-    for(let i = 1; i < children.length; i++){
-        children[i].prev = children[i - 1];
-        children[i - 1].next = children[i];
-    }
-    return children;
-}
-
-},{"domelementtype":"lMEbG","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kVUjx":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"9mWks","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kVUjx":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const reportWebVitals = (onPerfEntry)=>{
