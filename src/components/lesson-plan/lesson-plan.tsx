@@ -1,5 +1,4 @@
 import React from "react";
-import parse from "html-react-parser";
 import {
   Box,
   Grid,
@@ -13,7 +12,7 @@ import {
 
 type SectionProps = {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   children: React.ReactNode;
 };
 
@@ -23,11 +22,7 @@ const Section = ({ title, subtitle, children }: SectionProps) => (
       <Typography variant="h6" color="primary" sx={{ color: "#36454f" }}>
         {title}
       </Typography>
-      {subtitle && (
-        <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-          {parse(subtitle)}
-        </Typography>
-      )}
+      {subtitle}
     </Box>
     <Divider sx={{ mb: 2 }} />
     {children}
@@ -55,6 +50,13 @@ const ChecklistSection = ({
 );
 
 export function NarrativeWritingLesson() {
+  const Subtitle = (
+    <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+      Specific ways that <em>academic language</em> is used in reading, writing,
+      listening, and/or speaking.
+    </Typography>
+  );
+
   return (
     <Box sx={{ p: 2 }}>
       <Typography
@@ -68,11 +70,7 @@ export function NarrativeWritingLesson() {
 
       <DirectInstructionLesson />
 
-      <Section
-        title="Language Demands"
-        subtitle="Specific ways that <em>academic language</em> is used in reading,
-          writing, listening, and/or speaking."
-      >
+      <Section title="Language Demands" subtitle={Subtitle}>
         <ChecklistSection
           heading="Language Function(s)"
           description="Identify: Students will identify the plot, setting, characters, problem and solution, text evidence from the source, and others from their narrative editing and revising checklist within their own narrative writing."
