@@ -9,36 +9,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  pointer-events: none;
-  height: 40vmin;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: 20s linear infinite App-logo-spin;
-  }
-}
-
-.App-header {
-  color: #36454f;
-  background-color: #f3d4d5;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  display: flex;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @font-face {
   font-family: Baltiholm;
   src: url("Baltiholm-lg2n0.3ad153b6.ttf") format("truetype");
@@ -46,22 +16,11 @@ code {
   font-style: normal;
 }
 
-h2 {
-  margin-bottom: .25rem;
-  font-family: Baltiholm, sans-serif;
-  font-size: 80px;
-}
-
-div {
-  align-content: center;
-  place-items: center;
-  display: grid;
-}
-
-.About-me {
-  text-align: justify;
-  max-width: 75%;
-  margin-top: 0;
+@font-face {
+  font-family: Teacher;
+  src: url("TeachersStudent-Regular.e859aec0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -455,67 +414,6 @@ div {
   display: none;
   position: absolute;
   top: 0;
-  left: 0;
-}
-
-body {
-  background-color: #525659;
-  margin: 0;
-  font-family: Segoe UI, Tahoma, sans-serif;
-}
-
-.Example header {
-  color: #36454f;
-  margin: 0;
-  padding: 10px 5px;
-}
-
-.Example header h1 {
-  margin: 0;
-}
-
-.Example__container {
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0;
-  padding: 10px;
-  display: flex;
-}
-
-.Example__container__document {
-  width: 100%;
-  max-width: calc(100% - 2em);
-  margin: .2em 0 0;
-}
-
-.Example__container__document .react-pdf__Document {
-  box-sizing: border-box;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  height: calc(100% - 10vh);
-  padding: 40px;
-  display: flex;
-}
-
-.Example__container__document .react-pdf__Page {
-  margin: .2em 0;
-  box-shadow: 0 0 8px #00000080;
-}
-
-.Example__container__document .react-pdf__message {
-  color: #fff;
-  padding: 10px;
-}
-
-.menu-item:hover:after {
-  content: "";
-  background-color: #000;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  bottom: -5px;
   left: 0;
 }
 /*# sourceMappingURL=hillaryvance.github.io.9f367d21.css.map */
