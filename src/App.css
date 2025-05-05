@@ -1,33 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #f3d4d5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #36454f;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @font-face {
   font-family: 'Baltiholm';
   src: url('/assets/Baltiholm-lg2n0.ttf') format('truetype');
@@ -35,20 +5,10 @@
   font-style: normal;
 }
 
-h2 {
-  font-family: 'Baltiholm', sans-serif;
-  font-size: 80px;
-  margin-bottom: 0.25rem;
+@font-face {
+  font-family: 'Teacher';
+  src: url('/assets/TeachersStudent-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-div {
-  display: grid;
-  place-items: center;
-  align-content: center;
-}
-
-.About-me {
-  margin-top: 0;
-  max-width: 75%;
-  text-align: justify;
-}
