@@ -33,7 +33,18 @@ function ResponsiveDocument({ fileUrl }: { fileUrl: string }) {
     return () => observer.disconnect();
   }, []);
   return (
-    <Box ref={container} sx={{ width: "100%", minHeight: 100 }}>
+    <Box
+      ref={container}
+      sx={{
+        width: "100%",
+        minHeight: 100,
+        "& .react-pdf__Page": {
+          borderRadius: 3,
+          overflow: "hidden",
+          "& canvas": { borderRadius: "inherit" },
+        },
+      }}
+    >
       {width > 0 && (
         <Document
           file={fileUrl}

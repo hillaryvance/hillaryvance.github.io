@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
 import { PortfolioSection } from "../layout/PortfolioSection";
 import { PdfFile } from "../pdf-file";
 import { sectionHeading, sectionLayout, sectionStack } from "../../theme";
@@ -27,7 +27,18 @@ export function DocumentSection({
           <Typography variant="h2" align="center" sx={sectionHeading(accent)}>
             {title}
           </Typography>
-          <PdfFile fileUrl={fileUrl} title={title} />
+          <Paper
+            elevation={8}
+            sx={{
+              p: 2,
+              borderRadius: 3,
+              width: "100%",
+              maxWidth: 850,
+              overflow: "hidden",
+            }}
+          >
+            <PdfFile fileUrl={fileUrl} title={title} />
+          </Paper>
         </Stack>
       </Box>
     </PortfolioSection>
