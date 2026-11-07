@@ -1,14 +1,62 @@
 @font-face {
-  font-family: 'Baltiholm';
-  src: url('/assets/Baltiholm-lg2n0.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Baltiholm";
+  src: url("../assets/Baltiholm-lg2n0.ttf") format("truetype");
+  font-display: swap;
 }
-
 @font-face {
-  font-family: 'Teacher';
-  src: url('/assets/TeachersStudent-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Teacher";
+  src: url("../assets/TeachersStudent-Regular.ttf") format("truetype");
+  font-display: swap;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+.portfolio-section {
+  scroll-margin-top: var(--section-offset);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio-section {
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+  .portfolio-section.visible,
+  .portfolio-section:focus-within,
+  .portfolio-section:target {
+    opacity: 1;
+  }
+}
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  transform: translateY(-200%);
+  z-index: 1500;
+  padding: 12px;
+  background: white;
+  color: #36454f;
+}
+.skip-link:focus {
+  transform: none;
+}
+:focus-visible {
+  outline: 3px solid #227f79;
+  outline-offset: 4px;
+}
+.react-pdf__Page {
+  margin-bottom: 16px;
+}
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

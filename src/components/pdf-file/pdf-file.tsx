@@ -1,57 +1,89 @@
-import { useState } from "react";
-import { pdfjs, Document, Page } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-import type { PDFDocumentProxy } from "pdfjs-dist";
-import { Box } from "@mui/material";
+import {
+  Component,
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
+import { Box, Link, Typography } from "@mui/material";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+const PdfViewer = lazy(() => import("./PdfViewer"));
 
-const options = {
-  cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
-  standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
-};
-
-type PDFFile = string | File | null;
-
-type PdfFileProps = {
-  fileUrl: URL;
-};
-
-export const PdfFile = ({ fileUrl }: PdfFileProps) => {
-  const [file] = useState<PDFFile>(fileUrl.toString());
-  const [numPages, setNumPages] = useState<number>();
-
-  function onDocumentLoadSuccess({
-    numPages: nextNumPages,
-  }: PDFDocumentProxy): void {
-    setNumPages(nextNumPages);
+class PdfBoundary extends Component<
+  { children: ReactNode },
+  { failed: boolean }
+> {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
   }
+  render() {
+    return this.state.failed ? (
+      <Typography role="alert">
+        The preview could not load. Please open the PDF below.
+      </Typography>
+    ) : (
+      this.props.children
+    );
+  }
+}
 
+export function PdfFile({
+  fileUrl,
+  title = "Document",
+}: {
+  fileUrl: string;
+  title?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") {
+      setReady(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setReady(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
   return (
     <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        backgroundColor: "inherit",
-        width: "100%",
-        height: "auto",
-        marginTop: "2rem",
-      }}
+      ref={ref}
+      sx={{ width: "100%", maxWidth: 850, minWidth: 0, textAlign: "center" }}
     >
-      <Document
-        file={file}
-        onLoadSuccess={onDocumentLoadSuccess}
-        options={options}
+      <PdfBoundary key={fileUrl}>
+        {ready ? (
+          <Suspense
+            fallback={
+              <Typography role="status">Loading PDF preview…</Typography>
+            }
+          >
+            <PdfViewer fileUrl={fileUrl} />
+          </Suspense>
+        ) : (
+          <Typography>
+            PDF preview loads as you approach this section.
+          </Typography>
+        )}
+      </PdfBoundary>
+      <Link
+        href={fileUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{ display: "inline-block", mt: 2 }}
       >
-        {Array.from(new Array(numPages), (_el, index) => (
-          <Page
-            key={`page_${index + 1}`}
-            pageNumber={index + 1}
-            height={window.innerHeight / 1.5}
-          />
-        ))}
-      </Document>
+        Open {title} PDF (new tab)
+      </Link>
     </Box>
   );
-};
+}

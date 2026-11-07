@@ -1,1 +1,1 @@
-export { PdfFile } from './pdf-file';
+export { PdfFile } from "./pdf-file";

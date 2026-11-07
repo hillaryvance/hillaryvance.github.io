@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Hillary Vance’s teaching portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React and TypeScript portfolio built with Parcel and Material UI. The existing six sections, personal content, and fiesta banner are retained.
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+Use Node.js 22.14 or newer (CI uses Node 22).
 
-### `npm start`
+```sh
+npm ci
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open http://localhost:3000. Parcel bundles the entry at `src/index.html` and follows imported images, fonts, PDFs, and the PDF.js worker.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Editing the portfolio
 
-### `npm test`
+- `src/App.tsx` composes the page and specifies document assets. Section components live in `src/components/sections`; navigation, the banner, and section reveal behavior live in `src/components/layout`.
+- Edit biography, skills, and navigation labels in `src/data/portfolio.ts`. Keep section IDs stable so saved links continue to work.
+- Change shared colors, typography, and layout in `src/theme.ts`; global fonts, focus indicators, and motion rules live in `src/App.css`.
+- Lesson presentation lives in `src/components/lesson-plan`. The Science Lesson intentionally retains the original duplicated narrative-writing material pending author-supplied science content. Shared activities are rendered once per lesson; changing them affects both lessons.
+- Replace documents and images in `assets` and update their `new URL(..., import.meta.url)` references if filenames change. Fonts use relative CSS URLs so Parcel emits them with the build.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+PDF previews load near the viewport. The installed PDF.js worker is bundled locally, and each document includes an ordinary link if preview loading fails. PDFs with unusual fonts or non-Latin character maps may require additional local PDF.js resources; verify replacement documents in a browser.
 
-### `npm run build`
+## Quality checks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm run typecheck
+npm run lint
+npm run format:check
+npm test
+npm run build
+# Run everything:
+npm run check
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm run format` formats source and configuration. `npm run test:watch` runs Vitest interactively. Tests use jsdom and mock PDF rendering; production preview checks must also verify real PDF rendering.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+CI runs the complete check on pushes and pull requests. Before release, preview `dist` with a static server and check narrow mobile, tablet, and desktop widths; keyboard navigation and drawer closing; direct hash links; reduced motion; and both PDF previews, text selection, links, images, and fonts. Test with the site served under a path prefix as well as at `/`.
 
-### `npm run eject`
+## Build and deploy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm run build` clears generated output and emits the static site to `dist` using relative asset URLs. Automatic dependency installation during builds is disabled so missing dependencies fail explicitly. To publish manually to the configured GitHub Pages repository:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm run deploy
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The production browser targets retain Chrome 100 as a compatibility floor. This keeps Parcel’s fallback asset loader in use; with only recent browser targets, the patched bundler emitted bare module references without an import map during production verification. Recheck a real production preview before changing this target. The explicit browser target also keeps the Node version requirement separate from client compilation.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This builds first, then publishes `dist` with `gh-pages`. Deployment requires repository write access and is never performed by CI. No backend, secrets, or environment variables are needed.
