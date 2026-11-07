@@ -1,244 +1,158 @@
-import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "@mui/material";
+import { useId, type CSSProperties } from "react";
 import { colors } from "../../theme";
-const FiestaFlag: React.FC<{
-  xOffset: number;
-  animate?: boolean;
-  index: number;
-}> = ({ xOffset, animate = false, index }) => {
-  const flagColors = [
-    colors.coral,
-    colors.teal,
-    colors.blue,
-    colors.sage,
-    colors.yellow,
-    colors.lavender,
-    "#FF9F43",
-    "#26de81",
-  ];
-  const color = flagColors[index % flagColors.length];
-  const flagHeight = 80;
+import "./FiestaBanner.css";
 
-  // Calculate draping effect - creates a natural curve
-  const drapeFactor = Math.sin((index / 25) * Math.PI * 4) * 15 + 10;
-  const swayOffset = animate ? Math.sin(index * 0.5) * 3 : 0;
+const flagColors = [
+  colors.coral,
+  colors.teal,
+  colors.yellow,
+  colors.blue,
+  colors.lavender,
+  colors.sage,
+  "#F1B46D",
+] as const;
+const tileWidth = 504;
+const flagSpacing = tileWidth / flagColors.length;
 
-  return (
-    <g transform={`translate(${xOffset}, ${drapeFactor})`}>
-      {/* Flag rope/string with curve */}
-      <path
-        d={`M 0 0 Q 30 ${drapeFactor * 0.3} 60 0`}
-        stroke="#8B4513"
-        strokeWidth="3"
-        fill="none"
-        opacity="0.8"
-      />
+// Match both the position and tangent of the cord at each attachment.
+function cordAttachment(x: number) {
+  const progress = x / (tileWidth / 2);
+  const t = progress <= 1 ? progress : progress - 1;
+  const curve = t * t * (3 - 2 * t);
+  const slope =
+    ((progress <= 1 ? 34 : -34) * 6 * t * (1 - t)) / (tileWidth / 2);
+  return {
+    y: progress <= 1 ? 6 + 34 * curve : 40 - 34 * curve,
+    angle: (Math.atan(slope) * 180) / Math.PI,
+  };
+}
 
-      {/* Triangular pennant flag with natural sway */}
-      <path
-        d={`M 5 0 L 55 0 L ${30 + swayOffset} ${flagHeight} Z`}
-        fill={color}
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        opacity={animate ? 0.9 : 0.8}
-        style={{
-          transition: "all 0.6s ease-in-out",
-          filter: animate
-            ? "drop-shadow(0 6px 12px rgba(0,0,0,0.4))"
-            : "drop-shadow(0 3px 6px rgba(0,0,0,0.3))",
-          transformOrigin: "30px 0px",
-          transform: animate
-            ? `rotate(${swayOffset * 0.5}deg)`
-            : "rotate(0deg)",
-        }}
-      />
-
-      {/* Decorative pattern on flag */}
-      <circle
-        cx={30 + swayOffset * 0.3}
-        cy="25"
-        r="8"
-        fill="#FFFFFF"
-        opacity="0.7"
-      />
-      <circle
-        cx={30 + swayOffset * 0.3}
-        cy="25"
-        r="4"
-        fill={color}
-        opacity="0.9"
-      />
-
-      {/* Small decorative dots that move with the flag */}
-      <circle
-        cx={20 + swayOffset * 0.2}
-        cy="40"
-        r="3"
-        fill="#FFFFFF"
-        opacity="0.6"
-      />
-      <circle
-        cx={40 + swayOffset * 0.2}
-        cy="40"
-        r="3"
-        fill="#FFFFFF"
-        opacity="0.6"
-      />
-      <circle
-        cx={30 + swayOffset * 0.4}
-        cy="55"
-        r="3"
-        fill="#FFFFFF"
-        opacity="0.6"
-      />
-    </g>
-  );
-};
-
-export const FiestaBanner: React.FC = () => {
-  const [animate, setAnimate] = useState(false);
-  const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
-  const flagCount = 25;
-  const flagWidth = 60;
-  const totalWidth = flagCount * flagWidth;
-
-  // Create multiple attachment points for more realistic draping
-  const attachmentPoints = Array.from({ length: flagCount + 1 }, (_, i) => ({
-    x: i * flagWidth,
-    y: 5 + Math.sin(i * 0.8) * 8, // Creates natural draping curves
-  }));
-
-  useEffect(() => {
-    if (reducedMotion) return;
-    const interval = setInterval(() => {
-      setAnimate((prev) => !prev);
-    }, 3000); // Slower animation for more realistic movement
-    return () => clearInterval(interval);
-  }, [reducedMotion]);
+export function FiestaBanner() {
+  const id = useId().replace(/:/g, "");
+  const patternId = `${id}-flags`;
+  const sheenId = `${id}-sheen`;
+  const shadowId = `${id}-shadow`;
 
   return (
     <svg
+      className="fiesta-banner"
       aria-hidden="true"
       focusable="false"
       width="100%"
-      height="120" // Increased height to accommodate draping
-      viewBox={`0 0 ${totalWidth} 120`}
-      preserveAspectRatio="none"
+      height="120"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ display: "block" }}
     >
-      {/* Background gradient with subtle shadow */}
       <defs>
-        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#87CEEB" stopOpacity="0.2" />
-          <stop offset="50%" stopColor={colors.background} stopOpacity="0.1" />
-          <stop offset="100%" stopColor={colors.background} stopOpacity="0.3" />
+        <linearGradient id={sheenId} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0.28" />
+          <stop offset="45%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="100%" stopColor="#69483D" stopOpacity="0.1" />
         </linearGradient>
-
-        {/* Shadow filter for more realistic depth */}
-        <filter id="bannerShadow" x="-50%" y="-50%" width="200%" height="200%">
+        <filter id={shadowId} x="-25%" y="-15%" width="150%" height="150%">
           <feDropShadow
             dx="0"
             dy="3"
             stdDeviation="2"
-            floodColor="rgba(0,0,0,0.2)"
+            floodColor="#69483D"
+            floodOpacity="0.16"
           />
         </filter>
+        {/* Pixel-sized tiles keep pennants in proportion at every screen width. */}
+        <pattern
+          id={patternId}
+          x="20"
+          width={tileWidth}
+          height="120"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M 0 6 C 84 6 168 40 252 40 C 336 40 420 6 504 6"
+            fill="none"
+            stroke="#A78064"
+            strokeWidth="2.5"
+          />
+          <path
+            d="M 0 5 C 84 5 168 39 252 39 C 336 39 420 5 504 5"
+            fill="none"
+            stroke="#FFF5E6"
+            strokeWidth="0.8"
+            strokeOpacity="0.75"
+          />
+          {/* Each swag is fastened at the menu edge, with the cord dipping below. */}
+          {[0, tileWidth].map((x) => (
+            <g key={x} transform={`translate(${x} 0)`}>
+              <path
+                d="M 0 -2 V 6"
+                stroke="#A78064"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <circle
+                cy="6"
+                r="3.5"
+                fill="#C7A27B"
+                stroke="#FFF5E6"
+                strokeWidth="1"
+              />
+              <circle cx="-0.8" cy="5" r="1" fill="#FFF5E6" opacity="0.8" />
+            </g>
+          ))}
+          {flagColors.map((color, index) => {
+            const x = flagSpacing * (index + 0.5);
+            const { y, angle } = cordAttachment(x);
+            return (
+              <g
+                key={color}
+                transform={`translate(${x} ${y}) rotate(${angle})`}
+              >
+                <g
+                  className="fiesta-banner__flag"
+                  style={
+                    {
+                      "--flag-delay": `${-index * 0.8}s`,
+                      "--flag-duration": `${5 + (index % 3) * 0.6}s`,
+                    } as CSSProperties
+                  }
+                >
+                  <path
+                    d="M -25 0 Q -27 0 -26 3 L -1 64 Q 0 66 1 64 L 26 3 Q 27 0 25 0 Z"
+                    fill={color}
+                    stroke="#FFF8EF"
+                    strokeWidth="1.5"
+                    strokeLinejoin="round"
+                    filter={`url(#${shadowId})`}
+                  />
+                  <path
+                    d="M -25 0 Q -27 0 -26 3 L -1 64 Q 0 66 1 64 L 26 3 Q 27 0 25 0 Z"
+                    fill={`url(#${sheenId})`}
+                  />
+                  <path
+                    d="M -19 7 H 19 L 0 53 Z"
+                    fill="none"
+                    stroke="#FFF8EF"
+                    strokeOpacity="0.6"
+                    strokeWidth="0.8"
+                    strokeDasharray="2 3"
+                  />
+                  <g fill="#FFF8EF" opacity="0.8">
+                    <path d="M 0 13 Q 9 21 0 29 Q -9 21 0 13 Z" />
+                    <path d="M -8 21 Q 0 12 8 21 Q 0 30 -8 21 Z" />
+                    <circle cy="39" r="1.6" />
+                  </g>
+                  <circle cy="21" r="2.4" fill={color} />
+                  <path
+                    d="M -23 3 H 23"
+                    stroke="#FFF8EF"
+                    strokeOpacity="0.45"
+                    strokeWidth="1"
+                  />
+                </g>
+              </g>
+            );
+          })}
+        </pattern>
       </defs>
-
-      {/* Main draped rope - creates the hanging effect */}
-      <path
-        d={`M 0 10 ${attachmentPoints
-          .map((point, i) =>
-            i === 0
-              ? `M ${point.x} ${point.y}`
-              : `Q ${point.x - 20} ${point.y + 5} ${point.x} ${point.y}`,
-          )
-          .join(" ")}`}
-        stroke="#8B4513"
-        strokeWidth="4"
-        fill="none"
-        opacity="0.9"
-        filter="url(#bannerShadow)"
-        style={{
-          transition: "all 0.3s ease-in-out",
-        }}
-      />
-
-      {/* Individual flags with natural draping */}
-      {Array.from({ length: flagCount }).map((_, i) => (
-        <FiestaFlag
-          key={i}
-          xOffset={i * flagWidth}
-          animate={animate && !reducedMotion}
-          index={i}
-        />
-      ))}
-
-      {/* Enhanced decorative elements */}
-      <g opacity="0.7">
-        {/* Floating sparkles that move with the banner */}
-        {Array.from({ length: 12 }).map((_, i) => (
-          <g key={i}>
-            <circle
-              cx={80 + i * 120}
-              cy={15 + Math.sin(i * 0.7) * 8}
-              r="2"
-              fill="#FFD700"
-              opacity={animate ? 1 : 0.6}
-              style={{
-                transition: "all 0.4s ease-in-out",
-                transform: animate ? "scale(1.5)" : "scale(1)",
-              }}
-            />
-          </g>
-        ))}
-
-        {/* Additional floating confetti */}
-        {Array.from({ length: 8 }).map((_, i) => (
-          <g key={`confetti-${i}`}>
-            <rect
-              x={150 + i * 150}
-              y={25 + Math.cos(i * 0.6) * 6}
-              width="4"
-              height="4"
-              fill={
-                [colors.coral, colors.teal, colors.yellow, colors.lavender][
-                  i % 4
-                ]
-              }
-              opacity={animate ? 0.8 : 0.4}
-              style={{
-                transition: "all 0.5s ease-in-out",
-                transform: animate ? "rotate(45deg)" : "rotate(0deg)",
-              }}
-            />
-          </g>
-        ))}
-      </g>
-
-      {/* Attachment points to menu bar (small decorative elements) */}
-      {attachmentPoints
-        .slice(0, -1)
-        .filter((_, i) => i % 3 === 0)
-        .map((point, i) => (
-          <g key={`attachment-${i}`}>
-            <circle
-              cx={point.x}
-              cy={point.y}
-              r="3"
-              fill="#8B4513"
-              opacity="0.7"
-            />
-            <circle
-              cx={point.x}
-              cy={point.y}
-              r="1.5"
-              fill="#D2691E"
-              opacity="0.9"
-            />
-          </g>
-        ))}
+      <rect width="100%" height="120" fill={`url(#${patternId})`} />
     </svg>
   );
-};
+}

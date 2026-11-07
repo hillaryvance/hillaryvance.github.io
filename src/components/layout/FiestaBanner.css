@@ -1,0 +1,25 @@
+.fiesta-banner {
+  display: block;
+  overflow: hidden;
+}
+
+.fiesta-banner__flag {
+  transform-origin: 0 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fiesta-banner__flag {
+    animation: fiesta-sway var(--flag-duration) ease-in-out var(--flag-delay)
+      infinite alternate;
+  }
+}
+
+@keyframes fiesta-sway {
+  from {
+    /* Keep the entire top seam attached while the pennant moves below it. */
+    transform: skewX(-2deg);
+  }
+  to {
+    transform: skewX(2deg);
+  }
+}

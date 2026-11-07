@@ -1,6 +1,7 @@
 import type React from "react";
 import { Box, Stack, Grow, Chip, useMediaQuery } from "@mui/material";
 import { skills } from "../../data/portfolio";
+import { alpha } from "@mui/material/styles";
 import { colors } from "../../theme";
 export const SkillsSection: React.FC = () => {
   const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
@@ -9,7 +10,6 @@ export const SkillsSection: React.FC = () => {
     <Box sx={{ mt: 2 }}>
       <Stack
         direction="row"
-
         sx={{
           flexWrap: "wrap",
           gap: 1,
@@ -28,15 +28,24 @@ export const SkillsSection: React.FC = () => {
             <Chip
               label={skill}
               sx={{
-                backgroundColor: colors.teal,
-                color: "#243b3a",
+                backgroundColor: alpha("#fff", 0.24),
+                backdropFilter: "blur(8px)",
+                border: "1px solid",
+                borderColor: alpha("#fff", 0.65),
+                boxShadow: `0 4px 12px ${alpha(colors.ink, 0.1)}, inset 0 1px 0 ${alpha("#fff", 0.5)}`,
+                color: colors.ink,
+                cursor: "default",
+                userSelect: "none",
                 fontWeight: "bold",
                 fontSize: "16px",
                 padding: "8px 16px",
+                transition:
+                  "background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, translate 200ms ease",
                 "&:hover": {
-                  backgroundColor: colors.blue,
-                  transform: "scale(1.05)",
-                  transition: "all 0.2s ease-in-out",
+                  backgroundColor: alpha("#fff", 0.42),
+                  borderColor: alpha("#243b3a", 0.65),
+                  boxShadow: `0 7px 18px ${alpha(colors.ink, 0.16)}, inset 0 1px 0 ${alpha("#fff", 0.7)}`,
+                  translate: reducedMotion ? "none" : "0 -2px",
                 },
               }}
             />

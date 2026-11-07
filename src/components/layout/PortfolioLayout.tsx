@@ -135,7 +135,8 @@ export function PortfolioLayout({ children }: { children: ReactNode }) {
       <Box
         sx={{
           position: "fixed",
-          top: "var(--header-height)",
+          // Tuck the cord anchors beneath the app bar so the swags hang from its edge.
+          top: "calc(var(--header-height) - 6px)",
           width: "100%",
           zIndex: 1,
           pointerEvents: "none",
